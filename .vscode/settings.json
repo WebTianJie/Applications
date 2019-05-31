@@ -1,0 +1,5 @@
+{
+    "vetur.validation.template": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.find.seedSearchStringFromSelection": false
+}
