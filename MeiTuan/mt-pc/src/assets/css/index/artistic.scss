@@ -19,6 +19,10 @@
       background-color: rgb(190, 164, 116);
       background-image: linear-gradient(to right, rgb(194, 176, 142) 3%, rgb(190, 164, 116) 100%);
     }
+    &.discount{
+      background-color: rgb(190, 164, 116);
+      background-image: linear-gradient(to right, rgb(255, 113, 74) 2%, rgb(252, 66, 66) 97%);
+    }
     &.youhui {
       background: linear-gradient(to right, rgb(250, 60, 104) 2%, rgb(254, 70, 77) 97%) rgb(250, 60, 104);
     }

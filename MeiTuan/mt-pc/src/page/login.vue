@@ -1,0 +1,82 @@
+<template>
+  <div class="page-login">
+    <div class="login-header">
+      <a class="logo" href="http://www.meituan.com"></a>
+    </div>
+    <div class="login-panel">
+      <div class="banner">
+        <img
+          src="//s0.meituan.net/bs/file/?f=fe-sso-fs:build/page/static/banner/www.jpg"
+          width="480"
+          height="370"
+          alt="美团网"
+        >
+      </div>
+      <div class="form">
+          <h4 v-if="error" class="tips">{{error}}</h4>
+        <p>
+          <span>账号登录</span>
+        </p>
+        <el-input :class="{error: error && !userName}" prefix-icon="profile" v-model="userName" placeholder="手机号/用户名/邮箱"></el-input>
+        <el-input :class="{error: error && !password}" prefix-icon="password" v-model="password" type="password" placeholder="密码"></el-input>
+        <div class="foot">
+          <a>忘记密码?</a>
+        </div>
+        <el-button class="btn-login" @click="submit"> 默认按钮</el-button>
+        <p class="reg">
+          <span>还没有账号?</span>
+          <router-link :to="{name:'register'}">免费注册</router-link>
+        </p>
+        <div class="oauth-wrapper J-oauth-wrapper">
+          <h3 class="title-wrapper">
+            <span class="title">用合作网站账号登录</span>
+          </h3>
+          <div class="oauth cf">
+            <span
+              class="oauth__link oauth__link--qq third-login-btn"
+              data-href="/account/connect/tencent"
+              target="_blank"
+              id="J-third-tencent"
+            ></span>
+            <span
+              class="oauth__link oauth__link--weibo third-login-btn"
+              data-href="/account/connect/sina"
+              target="_blank"
+              id="J-third-sina"
+            ></span>
+          </div>
+          <i id="thirdLoginRiskpartner" data-riskpartner="0"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      userName: "",
+      password: "",
+      error:""
+    };
+  },
+  methods: {
+      submit() {
+          if(!this.userName){
+             this.error="请输入账号";
+             return false;
+          }
+          if(!this.password){
+            this.error="请输入密码";
+             return false;
+          }
+      }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "@/assets/css/login/index.scss";
+</style>

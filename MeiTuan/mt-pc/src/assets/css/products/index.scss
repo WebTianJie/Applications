@@ -89,6 +89,7 @@
           >span {
             font-size: 12px;
             padding-right: 10px;
+            .map{color: #13D1BE;}
           }
 
           >em {
@@ -238,6 +239,9 @@
           box-sizing: border-box;
           margin-right: 40px;
           text-align: center;
+        }
+        &.nav-title{
+          color:#ccc;
         }
       }
 

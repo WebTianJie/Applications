@@ -13,7 +13,7 @@ module.exports = {
   extends: ['plugin:vue/essential', 'airbnb-base'],
   // required to lint *.vue files
   plugins: [
-    'vue'
+    'vuefix'
   ],
   // check if imports actually resolve
   settings: {
@@ -25,6 +25,7 @@ module.exports = {
   },
   // add your custom rules here
   rules: {
+    "quotes": [1, "single"],
     "linebreak-style": [0, "error", "windows"],
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
