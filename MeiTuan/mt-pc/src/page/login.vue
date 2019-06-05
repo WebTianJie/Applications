@@ -49,11 +49,21 @@
         </div>
       </div>
     </div>
-    <div class="footer"></div>
+    <footer>
+      <ul>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer">关于美团</a></li>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer">加入我们</a></li>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer">商家入驻</a></li>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer">帮助中心</a></li>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer">美团手机版</a></li>
+      </ul>
+      <p>©2019 美团网团购 meituan.com 京ICP证070791号 京公网安备11010502025545号</p>
+    </footer>
   </div>
 </template>
 
 <script>
+import api from '@/Api/index'
 export default {
   data() {
     return {
@@ -72,6 +82,19 @@ export default {
             this.error="请输入密码";
              return false;
           }
+          api.login({
+            params:{
+              userName:this.userName,
+              password:this.password
+            }
+          }).then(res=>{
+            if(res.data.status=="success"){
+              this.$store.dispatch('setUserName',this.userName);
+              this.$router.push({name:'index'})
+            }else{
+              this.error=res.data.msg;
+            }
+          })
       }
   }
 };

@@ -1,9 +1,9 @@
 <template>
     <div>
         <span class="name">省份选择:</span>
-        <m-select title="省份" :value="province" :province="provinceList" :showSelectActive="provinceActive" @change_active="changeProvinceActive" @change="changeProvine" />
+        <m-select title="省份"    :value="province" :province="provinceList" :showSelectActive="provinceActive" @change_active="changeProvinceActive" @change="changeProvine" />
         <span class="name">城市选择:</span>
-        <m-select title="城市" :value="city" :province="cityList"  :showSelectActive="cityActive" @change_active="changeCityActive" @change="changeCity" />
+        <m-select title="城市" :className='mcity' :disabled="cityDisable" :value="city" :province="cityList"  :showSelectActive="cityActive" @change_active="changeCityActive" @change="changeCity" />
         <span>直接搜索:
         <el-select
                 v-model="searchword"
@@ -26,6 +26,7 @@
 
 <script>
     import MSelect from '@/components/changeCity/select'
+    import api from '@/Api/index.js'
     export default {
         data() {
           return {
@@ -38,10 +39,20 @@
                   searchList:['德州','济南','蓬莱','青岛','临沂','烟台','山东','山西'],
                   searchword:'',
                   loading:false,
+                  cityDisable:true,
+                  mcity:'mcity',
               }
         },
         components:{
             MSelect
+        },
+        created() {
+            api.getProvinceList().then(res=>{
+                this.provinceList=res.data.data.map(item=>{
+                    item.name=item.provinceName;
+                    return item;
+                });
+            })
         },
         methods:{
             changeProvinceActive(flag) {
@@ -60,10 +71,14 @@
 
             },
             changeCity(value){
-               this.city=value;
+               this.city=value.name;
+               this.$store.dispatch('setPosition',value);
+               this.$router.push({name:'index'})
             },
             changeProvine(value){
-                 this.province=value;
+                this.cityDisable=false;
+                 this.province=value.name;
+                 this.cityList=value.cityInfoList;
             }
         }
     }

@@ -4,21 +4,28 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 const state = {
-  position: '郑州',
+  position: {},
+  userName:'',
 };
-const mutation = {
+const mutations = {
   setPosition(state, val) {
     state.position = val;
   },
+  setUserName(state,val){
+    state.userName=val;
+  }
 };
 const actions = {
   setPosition({ commit }, val) {
     commit('setPosition', val);
   },
+  setUserName({commit},val){
+    commit('setUserName',val);
+  }
 };
 
 export default new Vuex.Store({
   state,
-  mutation,
+  mutations,
   actions,
 });

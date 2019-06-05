@@ -20,6 +20,21 @@ var api={
     },
     getRecents(params) {
         return axios.get('/api/meituan/city/recents.json',params);
+    },
+    getProvinceList(params){
+        return axios.get('/api/meituan/city/province.json',params);
+    },
+    getUserPosition(params){
+        return axios.get('/api/meituan/city/getPosition.json',params);
+    },
+    getCityList(params){
+        return axios.get('/api/meituan/city/cityList.json',params);
+    },
+    login(params) {
+        return axios.get('/api/meituan/login',params);
+    },
+    register(params){
+        return axios.get('/api/meituan/register',params);
     }
 }
 

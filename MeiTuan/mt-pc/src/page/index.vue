@@ -78,6 +78,9 @@ export default {
     MMenu,
     MLife,
     MContainer
+  },
+  created(){
+    console.log(this.$store.state.userName);
   }
 };
 </script>

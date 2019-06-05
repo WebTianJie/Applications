@@ -8,12 +8,13 @@
         </dl>
         <dl v-for="(item,index) in cityList" :key="index" :id="'city_'+index.toUpperCase()"  class="m-categroy-section">
             <dt>{{index.toUpperCase()}}</dt>
-            <dd ><span v-for="city in item" :key="city.id">{{city.name}}</span></dd>
+            <dd ><span v-for="city in item" @click="changeCity(city)" :key="city.id">{{city.name}}</span></dd>
         </dl>
     </div>
 </template>
 
 <script>
+    import api from '@/Api/index.js'
     export default {
         data() {
             return {
@@ -21,131 +22,16 @@
                 cityList: {},
             }
         },
+        methods:{
+            changeCity(item) {
+                this.$store.dispatch('setPosition',item);
+                this.$router.push({name:'index'})
+            }
+        },
         created(){
-            var data=[
-                    {
-                        "id":1,
-                        "name":"北京",
-                        "pinyin":"beijing",
-                        "acronym":"bj",
-                        "ranks":"S",
-                        "firstChar":"b"
-                    },
-                    {
-                        "id":10,
-                        "name":"上海",
-                        "pinyin":"shanghai",
-                        "acronym":"sh",
-                        "ranks":"K",
-                        "firstChar":"k"
-                    },
-                    {
-                        "id":20,
-                        "name":"广州",
-                        "pinyin":"gaungzhou",
-                        "acronym":"gz",
-                        "ranks":"A",
-                        "firstChar":"g"
-                    },
-                    {
-                        "id":30,
-                        "name":"哈尔滨",
-                        "pinyin":"haerbin",
-                        "acronym":"hrb",
-                        "ranks":"C",
-                        "firstChar":"h"
-                    },
-                    {
-                        "id":39,
-                        "name":"重庆",
-                        "pinyin":"chongqing",
-                        "acronym":"cq",
-                        "ranks":"D",
-                        "firstChar":"c"
-                    },
-                    {
-                        "id":49,
-                        "name":"河南",
-                        "pinyin":"henan",
-                        "acronym":"hn",
-                        "ranks":"S",
-                        "firstChar":"h"
-                    },
-                     {
-                        "id":15,
-                        "name":"西安",
-                        "pinyin":"xian",
-                        "acronym":"xa",
-                        "ranks":"K",
-                        "firstChar":"x"
-                    },
-                    {
-                        "id":25,
-                        "name":"安徽",
-                        "pinyin":"安徽",
-                        "acronym":"ah",
-                        "ranks":"K",
-                        "firstChar":"a"
-                    },
-                    {
-                        "id":21,
-                        "name":"桂林",
-                        "pinyin":"guilin",
-                        "acronym":"gl",
-                        "ranks":"S",
-                        "firstChar":"G"
-                    },
-                    {
-                        "id":31,
-                        "name":"昆明",
-                        "pinyin":"kunming",
-                        "acronym":"km",
-                        "ranks":"K",
-                        "firstChar":"k"
-                    },
-                    {
-                        "id":41,
-                        "name":"内蒙古",
-                        "pinyin":"neimenggu",
-                        "acronym":"nmg",
-                        "ranks":"N",
-                        "firstChar":"n"
-                    },
-                    {
-                        "id":61,
-                        "name":"南昌",
-                        "pinyin":"nanchang",
-                        "acronym":"nc",
-                        "ranks":"N",
-                        "firstChar":"n"
-                    },
-                     {
-                        "id":52,
-                        "name":"山西",
-                        "pinyin":"shangxi",
-                        "acronym":"sx",
-                        "ranks":"S",
-                        "firstChar":"s"
-                    },
-                     {
-                        "id":68,
-                        "name":"林州",
-                        "pinyin":"林州",
-                        "acronym":"lz",
-                        "ranks":"L",
-                        "firstChar":"l"
-                    },
-                     {
-                        "id":67,
-                        "name":"安阳",
-                        "pinyin":"anyang",
-                        "acronym":"ay",
-                        "ranks":"A",
-                        "firstChar":"a"
-                    }
-                ];
-                var obj={};
-                data.forEach((item,index)=>{
+            api.getCityList().then(res=>{
+            var obj={};
+                res.data.data.forEach((item,index)=>{
                     if(!obj[item.firstChar]){
                         obj[item.firstChar]=[];
                     }
@@ -153,6 +39,9 @@
 
                 })
               this.cityList=obj;
+              console.log(obj);
+            })
+
         }
     }
 </script>
