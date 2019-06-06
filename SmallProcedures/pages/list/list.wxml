@@ -1,0 +1,212 @@
+<div class="container">
+    <view class="recommend-container">
+        <view class="recommend-article">
+            <text class="date">十月七日</text>
+            <text class="recommend-title">点评人见闻:囧iOS阿富汗举案说法社交恐惧福利卡绝对是</text>
+            <image mode="widthFix" class="recommend-cover" src="/images/list/recommend-image.png" />
+        </view>
+        <view class="recmmend-box">
+            <text>+</text>
+            <text>女性穿搭</text>
+            <text>男性穿搭</text>
+            <text>心理</text>
+            <text>深度阅读</text>
+            <text>人生整理术</text>
+            <text>读书</text>
+            <text>日韩剧</text>
+            <text>吃喝攻略</text>
+            <text>...</text>
+        </view>
+        <view class="recmmend-list-container">
+            <view class="per-article">
+                <view class="article-head">
+                    <image src="/images/avatar.png" alt="" />
+                    <text>neffy</text>
+                    <text>等</text>
+                    <text>96</text>
+                    <text>人马克了</text>
+                </view>
+                <view class="article-cover">
+                    <image mode="widthFix" src="/images/list/article/1.png" />
+                </view>
+                <view class="article-title">
+                    <text>不论之吻?《吻》背后令人惊讶的往事</text>
+                </view>
+                <view class="article-handle-box">
+                    <view class="article-type">
+                        <text>深度阅读</text>
+                    </view>
+                    <view class="article-handle">
+                        <view>
+                            <image src="/images/icon/Icon_more.png" />
+                        </view>
+                        <view>
+                            <image src="/images/icon/Icon_relay.png" />
+                        </view>
+                        <view>
+                            <image src="/images/icon/Icon_circle_fill.png" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+             <view class="per-article">
+                <view class="article-head">
+                    <image src="/images/avatar.png" alt="" />
+                    <text>neffy</text>
+                    <text>等</text>
+                    <text>96</text>
+                    <text>人马克了</text>
+                </view>
+                <view class="article-cover">
+                    <image mode="widthFix" src="/images/list/article/1.png" />
+                </view>
+                <view class="article-title">
+                    <text>不论之吻?《吻》背后令人惊讶的往事</text>
+                </view>
+                <view class="article-handle-box">
+                    <view class="article-type">
+                        <text>深度阅读</text>
+                    </view>
+                    <view class="article-handle">
+                        <view>
+                            <image src="/images/icon/Icon_more.png" />
+                        </view>
+                        <view>
+                            <image src="/images/icon/Icon_relay.png" />
+                        </view>
+                        <view>
+                            <image src="/images/icon/Icon_circle_fill.png" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+             <view class="per-article">
+                <view class="article-head">
+                    <image src="/images/avatar.png" alt="" />
+                    <text>neffy</text>
+                    <text>等</text>
+                    <text>96</text>
+                    <text>人马克了</text>
+                </view>
+                <view class="article-cover">
+                    <image mode="widthFix" src="/images/list/article/1.png" />
+                </view>
+                <view class="article-title">
+                    <text>不论之吻?《吻》背后令人惊讶的往事</text>
+                </view>
+                <view class="article-handle-box">
+                    <view class="article-type">
+                        <text>深度阅读</text>
+                    </view>
+                    <view class="article-handle">
+                        <view>
+                            <image src="/images/icon/Icon_more.png" />
+                        </view>
+                        <view>
+                            <image src="/images/icon/Icon_relay.png" />
+                        </view>
+                        <view>
+                            <image src="/images/icon/Icon_circle_fill.png" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+             <view class="per-article">
+                <view class="article-head">
+                    <image src="/images/avatar.png" alt="" />
+                    <text>neffy</text>
+                    <text>等</text>
+                    <text>96</text>
+                    <text>人马克了</text>
+                </view>
+                <view class="article-cover">
+                    <image mode="widthFix" src="/images/list/article/1.png" />
+                </view>
+                <view class="article-title">
+                    <text>不论之吻?《吻》背后令人惊讶的往事</text>
+                </view>
+                <view class="article-handle-box">
+                    <view class="article-type">
+                        <text>深度阅读</text>
+                    </view>
+                    <view class="article-handle">
+                        <view>
+                            <image src="/images/icon/Icon_more.png" />
+                        </view>
+                        <view>
+                            <image src="/images/icon/Icon_relay.png" />
+                        </view>
+                        <view>
+                            <image src="/images/icon/Icon_circle_fill.png" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+             <view class="per-article">
+                <view class="article-head">
+                    <image src="/images/avatar.png" alt="" />
+                    <text>neffy</text>
+                    <text>等</text>
+                    <text>96</text>
+                    <text>人马克了</text>
+                </view>
+                <view class="article-cover">
+                    <image mode="widthFix" src="/images/list/article/1.png" />
+                </view>
+                <view class="article-title">
+                    <text>不论之吻?《吻》背后令人惊讶的往事</text>
+                </view>
+                <view class="article-handle-box">
+                    <view class="article-type">
+                        <text>深度阅读</text>
+                    </view>
+                    <view class="article-handle">
+                        <view>
+                            <image src="/images/icon/Icon_more.png" />
+                        </view>
+                        <view>
+                            <image src="/images/icon/Icon_relay.png" />
+                        </view>
+                        <view>
+                            <image src="/images/icon/Icon_circle_fill.png" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+             <view class="per-article">
+                <view class="article-head">
+                    <image src="/images/avatar.png" alt="" />
+                    <text>neffy</text>
+                    <text>等</text>
+                    <text>96</text>
+                    <text>人马克了</text>
+                </view>
+                <view class="article-cover">
+                    <image mode="widthFix" src="/images/list/article/1.png" />
+                </view>
+                <view class="article-title">
+                    <text>不论之吻?《吻》背后令人惊讶的往事</text>
+                </view>
+                <view class="article-handle-box">
+                    <view class="article-type">
+                        <text>深度阅读</text>
+                    </view>
+                    <view class="article-handle">
+                        <view>
+                            <image src="/images/icon/Icon_more.png" />
+                        </view>
+                        <view>
+                            <image src="/images/icon/Icon_relay.png" />
+                        </view>
+                        <view>
+                            <image src="/images/icon/Icon_circle_fill.png" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</div>
