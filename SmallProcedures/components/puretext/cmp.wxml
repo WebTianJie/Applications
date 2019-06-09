@@ -1,0 +1,4 @@
+<view class="container">
+    <view class="main-title">{{mainTitle}}</view>
+    <view class="subhead">{{subHead}}</view>
+</view>

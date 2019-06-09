@@ -1,7 +1,9 @@
-<!--pages/index/index.wxml-->
-<!-- <text>pages/index/index.wxml</text> -->
-<view class="container">
+<!-- <view class="container">
     <image class="avatar" src="/images/nh.jpg" />
     <text class="name" space="ensp">奈    何</text>
     <text class="welcome">欢迎回来</text>
-</view>
+</view> -->
+<imagetext mainTitle="先不说你是比还是瘦了返回来看的十块得你" subHead="2019-06-10" imgSrc="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1560073662060&di=12e0bc25107920c728d6520d155c39b3&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fdc54564e9258d1092f7663c9db58ccbf6c814d30.jpg" />
+<bigimg imgSrc="http://pic18.nipic.com/20120204/8339340_144203764154_2.jpg"  mainTitle="奥斯卡了几分拉进方式拉到就发送到了" ></bigimg>
+<puretext mainTitle="这是什么鬼标题" subHead="鬼标题---2012-02-14"></puretext>
+<nineimage />

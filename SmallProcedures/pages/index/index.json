@@ -1,5 +1,10 @@
 {
   "navigationBarBackgroundColor":"#00b26a",
   "navigationBarTitleText": "一笑奈何",
-  "usingComponents": {}
+  "usingComponents": {
+    "bigimg":"/components/bigimage/cmp",
+    "puretext":"/components/puretext/cmp",
+    "imagetext":"/components/imagetext/cmp",
+    "nineimage":"/components/nineimage/cmp"
+  }
 }
