@@ -2,8 +2,23 @@
     <image class="avatar" src="/images/nh.jpg" />
     <text class="name" space="ensp">奈    何</text>
     <text class="welcome">欢迎回来</text>
-</view> -->
+</view>
+<mvideo videoId="20180610" mainTitle="谁能知道,这到底是什么玩意儿,告诉我,谢谢" poster="http://img.soogif.com/lHUeCzcO5vIPMby1kEF817c8xnXjLdnw.gif" duration="41'" src=" http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" />
 <imagetext mainTitle="先不说你是比还是瘦了返回来看的十块得你" subHead="2019-06-10" imgSrc="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1560073662060&di=12e0bc25107920c728d6520d155c39b3&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fdc54564e9258d1092f7663c9db58ccbf6c814d30.jpg" />
 <bigimg imgSrc="http://pic18.nipic.com/20120204/8339340_144203764154_2.jpg"  mainTitle="奥斯卡了几分拉进方式拉到就发送到了" ></bigimg>
 <puretext mainTitle="这是什么鬼标题" subHead="鬼标题---2012-02-14"></puretext>
 <nineimage />
+<tag tag="心理" tagId="3" />
+<more tag="心理" />
+<like isLike="false" /> -->
+<!-- <article  wx:for="{{articleList}}" articleDetail="{{item}}" wx:key="item.artId" /> -->
+<nav class="nav" catch:nav="navTap" />
+<recommand recommend="{{recommend}}"  mazagineId="{{mazagineId}}"  class="recommend" />
+<view class="loading-container" wx:if="{{loading}}">
+    <loading class="loading"  />
+</view>
+<taglist markList="{{markList}}">
+    <add slot="before" class="add" />
+    <view slot="after" catch:tap="goCateLog" class="to-catelog">•••</view>
+</taglist>
+<articlelist articleList="{{articleList}}" mazagineId="{{mazagineId}}" getMore="{{getMore}}"  />

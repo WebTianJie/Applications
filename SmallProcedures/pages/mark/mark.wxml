@@ -1,0 +1,21 @@
+<view class="container">
+    <view class="user-container">
+        <view class="user-info">
+            <view class="user-name">{{userInfo.nickName}}</view>
+            <view class="user-avatar">
+                <image src="{{userInfo.avatarUrl}}" wx:if="{{!isShow}}" />
+                <!-- <button open-type="getUserInfo" wx:else  class="getUserInfo" bindgetuserinfo="getUserInfo">
+                    <image src="/images/mark/login.png" />
+                </button> -->
+                <imgbutton openType="getUserInfo"  wx:else  class="getUserInfo"  bind:getuserinfo="getUserInfo" imgSrc="/images/mark/login.png" />
+            </view>
+        </view>
+        <!-- <view class="share">
+            <image  src="/images/mark/relay.png" />
+        </view> -->
+        <view class="share">
+              <imgbutton openType="share"   imgSrc="/images/mark/relay.png" />
+        </view>
+    </view>
+    <articlelist />
+</view>

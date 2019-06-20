@@ -1,0 +1,25 @@
+<!-- components/article/cmp.wxml -->
+<view class="container">
+    <view class="mark-container">
+        <image class="avatar" src="{{articleDetail.mark.avatar}}" />
+        <text class="text">{{articleDetail.mark.people}}等{{articleDetail.mark.count}}人马克了</text>
+    </view>
+    <view>
+        <bigimg wx:if="{{articleDetail.type==0}}" imgSrc="{{articleDetail.imgArray[0]}}" mainTitle="{{articleDetail.mainTitle}}" />
+        <nineimage wx:elif="{{articleDetail.type==1}}" />
+        <imagetext wx:elif="{{articleDetail.type==2}}" mainTitle="{{articleDetail.mainTitle}}" subHead="{{articleDetail.subHead}}" imgSrc="{{articleDetail.imgArray[0]}}" />
+        <mvideo wx:elif="{{articleDetail.type==3}}" src="{{articleDetail.video.src}}" videoId="{{articleDetail.videoId}}" mainTitle="{{articleDetail.mainTitle}}" 
+        poster="http://img.soogif.com/iXHb8ExhxWbLtP63Bm8LTl7OPnOaoYQN.gif" duration="{{articleDetail.video.duration}}'" />
+        <puretext wx:else="{{articleDetail.type==4}}" mainTitle="{{articleDetail.mainTitle}}" subHead="{{articleDetail.subHead}}" />
+    </view>
+    <view class="control-container">
+        <view>
+            <tag tag="{{articleDetail.tag}}" tagId="{{articleDetail.tagId}}" />
+        </view>
+        <view class="control-box">
+            <more class="box" tag="{{articleDetail.tag}}" />
+            <imgbutton class="imgbutton box" openType="share"   imgSrc="/images/mark/relay.png" />
+            <like class="box" isLike="{{articleDetail.type%2==0}}" />
+        </view>
+    </view>
+</view>

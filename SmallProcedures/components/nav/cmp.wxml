@@ -1,0 +1,10 @@
+<!-- components/nav/cmp.wxml -->
+<scroll-view class="container" scroll-with-animation="true" scroll-x="true" scroll-into-view="{{activeId}}">
+    <!-- <text class="type active">青芒</text>
+    <text class="type">兴趣</text>
+    <text class="type">物质</text>
+    <text class="type">世界</text>
+    <text class="type">新事</text>
+    <text class="type">灵魂</text> -->
+    <text  wx:for="{{navArr}}" wx:key="index" id="{{'nav'+index}}"  data-index="{{index}}"  bind:tap="navTap" class="type {{index==navCurrindex? 'active' :''}}">{{item}}</text>
+</scroll-view>

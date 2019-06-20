@@ -1,6 +1,37 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/mark/mark",
+    "pages/index/index",
+    "pages/type/type",
+    "pages/cateloglist/cateloglist"
   ],
-  "sitemapLocation": "sitemap21.json"
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarTitleText":"一笑奈何",
+    "navigationBarBackgroundColor":"#fff",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+      "selectedColor":"#000",
+      "list":[
+        {
+          "pagePath":"pages/cateloglist/cateloglist",
+          "text":"目录",
+          "iconPath":"images/tab/catalog_selected.png",
+          "selectedIconPath":"images/tab/catalog.png"
+        },
+        {
+          "pagePath":"pages/index/index",
+          "text":"杂志",
+          "iconPath":"images/tab/index_selected.png",
+          "selectedIconPath":"images/tab/index.png"
+        },
+        {
+          "pagePath":"pages/mark/mark",
+          "text":"马克",
+          "iconPath":"images/tab/mark_selected.png",
+          "selectedIconPath":"images/tab/mark.png"
+        }
+      ]
+  }
 }

@@ -1,12 +1,11 @@
 .container{
-    width:700rpx;
+
 }
 .image-container{
     position: relative;
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width:700rpx;
     height:700rpx;
 }
 

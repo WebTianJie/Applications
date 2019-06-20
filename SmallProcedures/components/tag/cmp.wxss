@@ -1,0 +1,7 @@
+/* components/tag/cmp.wxss */
+.container{
+    border:#000 solid 1rpx;
+    padding:10rpx 20rpx;
+    display: inline-block;
+    font-size: 28rpx;
+}

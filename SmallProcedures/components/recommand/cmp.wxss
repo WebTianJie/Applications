@@ -1,0 +1,60 @@
+/* components/recommand/cmp.wxss */
+.contanier {
+    background-color:#fff;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+.big-title {
+ text-align:center;
+  position: relative;
+  font-size: 52rpx;
+  padding-bottom: 24rpx;
+  letter-spacing: 10rpx;
+}
+.big-title::after{
+    position: absolute;
+    left: 50%;
+    bottom:0;
+    margin-left:-57rpx;
+    width:114rpx;
+    height:4rpx;
+    background-color:#999;
+    content: '';
+}
+.title {
+    width:700rpx;
+    text-align:center;
+    margin-top:24rpx;
+    font-size:28rpx;
+}
+.image,.skeleton {
+    display: block;
+    margin:50rpx auto 28rpx auto;
+}
+.skeleton{
+    position: relative;
+    height: 750rpx;
+    background-color:rgba(0,0,0,.3);
+}
+.loader{
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left:-20rpx;
+    margin-top:-20rpx;
+    width:40rpx;
+    height:40rpx;
+    border-radius: 50%;
+    border:#888 solid 10rpx;
+    border-bottom-color:transparent;
+    animation: 1s loader linear infinite;
+}
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

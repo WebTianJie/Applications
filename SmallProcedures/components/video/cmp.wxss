@@ -1,0 +1,51 @@
+/* components/video/cmp.wxss */
+.container{
+    width:750rpx;
+    height:460rpx;
+}
+.video{
+    height:400rpx;
+}
+.poster-container{
+    width:100%;
+    height:400rpx;
+    position: absolute;
+}
+.poster{
+    width:90%;height:100%;
+}
+.controler{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-left: -50rpx;
+    margin-top:-50rpx;
+    width:100rpx;
+    height:100rpx;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.5);
+}
+.play-btn{
+    margin-top:24rpx;
+    width:30rpx;
+    height:30rpx;
+}
+.duration{
+    font-size:24rpx;
+    color:#fff;
+}
+.mainTitle{
+    font-size:40rpx;
+    padding:20rpx;
+}
+.mask{
+    position:fixed;
+    left:0;
+    top:0;
+    background-color:rgba(0,0,0,0.4);
+    width:750rpx;
+    height:1334rpx;
+}

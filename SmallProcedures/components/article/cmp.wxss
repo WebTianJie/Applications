@@ -1,0 +1,42 @@
+/* components/article/cmp.wxss */
+.container{
+ padding:20rpx;
+ background:rgb(255,255,255)
+}
+.mark-container{
+    padding-bottom:10rpx;
+}
+.avatar{
+    width:60rpx;
+    height:60rpx;
+    border-radius: 50%;
+    margin-right:20rpx;
+    vertical-align: middle;
+}
+.text{
+    font-size:28rpx;
+    color:#666;
+}
+.control-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    margin-top:10rpx;
+}
+.control-box{
+    display: flex;
+}
+.box{
+    display: block;
+    margin-left: 25rpx;
+}
+.imgbutton{
+    width:50rpx;
+    height:50rpx;
+    margin-bottom:10rpx;
+}
+.imgbutton image{
+    width:50rpx;
+    height:50rpx;    
+}

@@ -1,0 +1,10 @@
+<!--components/recommand/cmp.wxml-->
+<view class="container">
+    <view class="big-title">{{mazagineId==0?date:navArr[mazagineId]}}</view>
+    <view class="title">{{recommend.title}}</view>
+    <image class="image" src="{{recommend.imgSrc}}" wx:if="{{!recommend.imgSrc}}"></image>
+    <view class="skeleton" hidden="{{recommend.imgSrc}}">
+        <view class="loader"></view>
+    </view>
+
+</view>

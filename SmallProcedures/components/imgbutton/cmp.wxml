@@ -1,0 +1,6 @@
+<!--components/imgbutton/cmp.wxml-->
+<view class="container">
+     <button plain="true" open-type="{{openType}}" bindgetuserinfo="getUserInfo" >
+                    <image src="{{imgSrc}}" />
+      </button>
+</view>

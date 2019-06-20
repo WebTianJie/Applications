@@ -3,7 +3,7 @@
     padding: 0 20rpx;
 }
 .image{
-   width:700rpx;
+   width:100%;
 }
 .text{
     padding:0 30rpx;
