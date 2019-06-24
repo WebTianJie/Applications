@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "imgbutton":"/components/imgbutton/cmp",
+    "search":"/components/search/cmp",
     "articlelist":"/components/articlelist/cmp"
   }
 }

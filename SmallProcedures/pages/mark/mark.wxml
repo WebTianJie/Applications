@@ -17,5 +17,5 @@
               <imgbutton openType="share"   imgSrc="/images/mark/relay.png" />
         </view>
     </view>
-    <articlelist />
+    <articlelist articleList="{{likeList}}"   />
 </view>

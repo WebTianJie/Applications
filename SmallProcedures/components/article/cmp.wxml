@@ -19,7 +19,7 @@
         <view class="control-box">
             <more class="box" tag="{{articleDetail.tag}}" />
             <imgbutton class="imgbutton box" openType="share"   imgSrc="/images/mark/relay.png" />
-            <like class="box" isLike="{{articleDetail.type%2==0}}" />
+            <like class="box" isLike="{{likeStatus}}" catch:likeList="addLikeList" />
         </view>
     </view>
 </view>

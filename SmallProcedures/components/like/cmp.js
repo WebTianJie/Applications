@@ -11,7 +11,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    
   },
 
   /**
@@ -19,9 +19,11 @@ Component({
    */
   methods: {
     onTap(){
+      const isLike=!this.properties.isLike;
       this.setData({
-        isLike:!this.data.isLike
+        isLike:isLike
       })
+      this.triggerEvent('likeList',isLike,{});
     }
   }
 })

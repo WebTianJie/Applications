@@ -1,5 +1,5 @@
 {
-  "navigationBarBackgroundColor":"#00b26a",
+  "navigationBarBackgroundColor":"#000000",
   "navigationBarTitleText": "一笑奈何",
   "usingComponents": {
     "articlelist":"/components/articlelist/cmp",

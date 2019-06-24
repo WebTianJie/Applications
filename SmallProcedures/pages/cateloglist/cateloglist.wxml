@@ -1,2 +1,24 @@
-<!--pages/cateloglist/cateloglist.wxml-->
-<text>pages/cateloglist/cateloglist.wxml</text>
+<!-- pages/cateloglist/cateloglist.wxml -->
+<view class="container">
+    <search value="{{keywords}}" />
+    <view class="mark-container">
+        <view class="mark-control">
+            <view class="my-magazine">我的杂志</view>
+            <view class="manage-magazine">管理杂志</view>
+        </view>
+        <taglist markList="{{myTagList}}" >
+            <add slot="before" style="margin-right:20rpx" />
+        </taglist>
+    </view>
+    <view class="mark-container">
+        <view class="tag-list-container" wx:for="{{tagInfoList}}" wx:key="index">
+            <view>{{item.title}}></view>
+            <view>
+                <view class="tag" wx:for="{{item.tagList}}" wx:key="*this" wx:for-item="ele">
+                    <text class="tag-text"># {{ele.tag}}</text>
+                    <subscribe tag="{{ele.tag}}" type="{{ele.type}}"  tagId="{{ele.tagId}}" catch:tap="setMyTagsList" />
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

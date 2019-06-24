@@ -6,7 +6,8 @@ Page({
    */
   data: {
     userInfo: {},
-    isShow: true
+    isShow: true,
+    likeList: []
   },
 
   /**
@@ -33,12 +34,14 @@ Page({
         isShow: false
       })
     }
+    this.getMyLike();
   },
-  loadUserMsg(){
+  loadUserMsg() {
     const userInfo = wx.getUserInfo({
       success: res => {
         var userInfo = res.userInfo;
         this.getUserDetail(userInfo);
+        this.getMyLike();
       }
     });
   },
@@ -46,7 +49,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.loadUserMsg();
   },
 
   /**
@@ -54,6 +57,12 @@ Page({
    */
   onHide: function () {
 
+  },
+  getMyLike() {
+    const likeList = wx.getStorageSync('likeList') || [];
+    this.setData({
+      likeList: likeList
+    })
   },
 
   /**
