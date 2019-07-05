@@ -83,9 +83,9 @@ console.log('ready');
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    // this.setData({
-    //   getMore:this.data.getMore+random(20)
-    //  })
+    this.setData({
+      getMore:this.data.getMore+random(20)
+     })
   },
 
   /**

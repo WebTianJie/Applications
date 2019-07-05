@@ -96,8 +96,10 @@ Component({
     getSearchArticleList(start) {
       const searchWord = this.data.searchWord;
       let articleList = this.data.articleList;
+      console.log(searchWord);
       searchModel.getSearchArticleList(searchWord,start).then(res => {
-        articleList.push(res.data.data);
+        console.log(res);
+        articleList.push(res);
         this.setData({
           articleList: articleList
         })
@@ -108,7 +110,7 @@ Component({
       const mazagineId = this.data.mazagineId;
       const start = this.data.articleList.length;
       const type = this.data.type;
-      if (type == "index") {
+      if (type == "search") {
         this.getSearchArticleList(start);
       } else {
         this.getArticleList(mazagineId, start);
