@@ -1,0 +1,45 @@
+[master 25460ee] 小程序-
+ 47 files changed, 555 insertions(+), 201 deletions(-)
+ rewrite SmallProcedures/app.js (100%)
+ delete mode 100644 SmallProcedures/app.wxss
+ create mode 100644 SmallProcedures/images/avatar.png
+ create mode 100644 SmallProcedures/images/icon/Icon_circle.png
+ create mode 100644 SmallProcedures/images/icon/Icon_circle_fill.png
+ create mode 100644 SmallProcedures/images/icon/Icon_more.png
+ create mode 100644 SmallProcedures/images/icon/Icon_pause.png
+ create mode 100644 SmallProcedures/images/icon/Icon_play.png
+ create mode 100644 SmallProcedures/images/icon/Icon_play_white.png
+ create mode 100644 SmallProcedures/images/icon/Icon_relay.png
+ create mode 100644 SmallProcedures/images/list/article/1.png
+ create mode 100644 SmallProcedures/images/list/article/2.png
+ create mode 100644 SmallProcedures/images/list/article/3.png
+ create mode 100644 SmallProcedures/images/list/article/4.png
+ create mode 100644 SmallProcedures/images/list/article/5.png
+ create mode 100644 SmallProcedures/images/list/article/6.png
+ create mode 100644 SmallProcedures/images/list/article/7.png
+ create mode 100644 SmallProcedures/images/list/article/8.png
+ create mode 100644 SmallProcedures/images/list/article/icon/Icon_circle.png
+ create mode 100644 SmallProcedures/images/list/article/icon/Icon_circle1.png
+ create mode 100644 SmallProcedures/images/list/article/icon/Icon_circle_fill.png
+ create mode 100644 SmallProcedures/images/list/article/icon/Icon_circle_fill1.png
+ create mode 100644 SmallProcedures/images/list/article/icon/Icon_more.png
+ create mode 100644 SmallProcedures/images/list/article/icon/Icon_more1.png
+ create mode 100644 SmallProcedures/images/list/article/icon/Icon_relay.png
+ create mode 100644 SmallProcedures/images/list/article/icon/Icon_relay1.png
+ create mode 100644 SmallProcedures/images/list/recommend-image.png
+ create mode 100644 SmallProcedures/images/nh.jpg
+ create mode 100644 SmallProcedures/images/picture.png
+ create mode 100644 SmallProcedures/images/qrcode.png
+ rewrite SmallProcedures/pages/index/index.js (97%)
+ create mode 100644 SmallProcedures/pages/index/index.json
+ rewrite SmallProcedures/pages/index/index.wxml (93%)
+ create mode 100644 SmallProcedures/pages/list/list.js
+ create mode 100644 SmallProcedures/pages/list/list.json
+ create mode 100644 SmallProcedures/pages/list/list.wxml
+ create mode 100644 SmallProcedures/pages/list/list.wxss
+ delete mode 100644 SmallProcedures/pages/logs/logs.js
+ delete mode 100644 SmallProcedures/pages/logs/logs.json
+ delete mode 100644 SmallProcedures/pages/logs/logs.wxml
+ delete mode 100644 SmallProcedures/pages/logs/logs.wxss
+ create mode 100644 SmallProcedures/sitemap.json
+ delete mode 100644 SmallProcedures/utils/util.js
