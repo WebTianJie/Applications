@@ -1,17 +1,17 @@
 function createStore(initState){
-	var state=initState||{};
+	var  state=initState||{};
 	var funList=[];
 	function getState(type){
 		return state[type];
 	}
 	function disPatch(action){
-		state[action.type]=action.value;
+		state[action['type']]=action.value;
 		funList.forEach(function(ele,index,self){
 			ele();
 		})
 	}
 	function subscribe(func){
-		funList.push(func);
+		funList.push(func)
 	}
 	return {
 		getState:getState,
@@ -19,7 +19,7 @@ function createStore(initState){
 		subscribe:subscribe
 	}
 }
-var store=createStore({
+var  store=createStore({
 	text:'',
 	sex:'all'
 })
