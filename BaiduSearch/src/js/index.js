@@ -9,24 +9,25 @@ var personArr=[
 var oUl=document.getElementsByTagName('ul')[0];
 var btnArray=[].slice.call(document.getElementsByClassName('btn'),0);
 var oInput=document.getElementsByTagName('input')[0];
-var lastActiveBuutton=btnArray[2];
+var lastActiveBtn=btnArray[2];
+
 renderPage(personArr);
 store.subscribe(function(){
-	renderPage(lastFilterArr(personArr));
+	renderPage(combineFilterArr(personArr))
 })
-oInput.oninput=function(){
+btnArray.forEach(function(ele,index,self){
+	ele.onclick=function () {
+		changeActive(this);
+		store.disPatch({
+			type:'type',
+			value:this.getAttribute('sex')
+		})
+	}
+})
+var  timer=null;
+oInput.oninput=debounce(function(){
 	store.disPatch({
 		type:'text',
 		value:this.value
 	})
-}
-btnArray.forEach(function(ele,index,self){
-	ele.onclick=function(){
-		changeActive(this);
-		store.disPatch({
-			type:'sex',
-			value:this.getAttribute('sex')
-		})
-	}
-});
- 
+},500)

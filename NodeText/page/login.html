@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	<h1>我是登录页面</h1>
+	<input placeholder="请输入学号" id="stu_num" type="text" name="stu_num">
+	<input placeholder="请输入密码" id="pwd" type="password" name="pwd">
+	<button onclick="login()">登录</button>
+	</body>
+	<script>
+		function login(){
+			var  stu_num=document.getElementById('stu_num').value;
+			var  pwd=document.getElementById('pwd').value;
+			var  form=new FormData();
+			form.append('stu_num',stu_num);
+			form.append('pwd',pwd);
+			var xhr=new XMLHttpRequest();
+			xhr.open('post','/login',true);
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					alert(xhr.responseText);
+				}
+			}
+			xhr.send(form);
+		}
+	</script>
+</html>

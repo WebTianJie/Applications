@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>上传</title>
+	</head>
+	<body>
+		<input type="text" id="name" placeholder="请输入名字">
+		<input type="file" id="file" />
+		<img src="#" id="pic" >
+		<a href="#" id="dw" download="pic.jpg">点击下载</a>
+		<button onclick="submitFile()">提交</button>
+	</body>
+	<script>
+		function submitFile() {
+			var file = document.getElementById('file').files[0];
+			var name = document.getElementById('name').value;
+			var pic=document.getElementById('pic');
+			var dw=document.getElementById('dw');
+			var form = new FormData();
+			form.append('file', file);
+			form.append('name', name);
+			var xhr = new XMLHttpRequest();
+			xhr.open('post', '/upload', true);
+			xhr.onload = function() {
+				alert('上传完成');
+			}
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					var path = JSON.parse(xhr.responseText);
+					pic.src='/getPic?path='+path.path;
+					dw.href='/getPic?path='+path.path;
+				}
+			}
+			xhr.send(form);
+		}
+	</script>
+</html>
