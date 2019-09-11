@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.red{
+				font-size:35px;
+				color:red;
+			}
+			.blue{
+				font-size:35px;
+				color:blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="test"><span>
+		你好,{{content}},{{des}}</span><span>{{des}}</span>
+		{{obj.x}}
+		<input v-model="obj.x" v-on:keydown="enter" type="text">{{obj.x}}
+		<ul>
+			<li v-for="(key) in list">
+				{{key.name}}{{key.age}}
+			</li>
+		</ul>
+		<img v-bind:src="imgSrc" alt="">
+		<br>
+		<span v-bind:class="haha">我的天啊</span>
+		<br>
+		<span v-bind:class="{red:obj.x<2,blue:obj.x>2}">我的地啊</span>
+		</div>
+		
+	</body>
+	<script   type="module">//外部无法访问
+		import Due from './core/index.js'
+		window.test=new Due({
+			el:'test',
+			data:{
+				content:'panda',
+				ivalue:'默认值',
+				des:'panda say hellow',
+				obj:{
+					x:1,
+					y:1
+				},
+				list:[
+					{
+						name:'lili',age:18
+					},
+					{
+						name:'sasa',age:18
+					}
+				],
+				imgSrc:'img/1.jpg',
+				haha:"red"
+			},
+			methods:{
+				enter:function(){
+					console.log('hellow');
+				}
+			},
+			created:function(){
+				console.log('created');
+			}
+		});//外部可以访问
+		
+	</script>
+</html>
