@@ -1,0 +1,3 @@
+<view wx:for="{{arr}}" wx:key="*this">
+  {{item.name}}: {{item.age}}
+</view>
