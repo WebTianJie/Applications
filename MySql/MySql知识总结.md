@@ -77,3 +77,6 @@
 		select * from student order by age desc 按照年龄的倒序查询
 	22:删除语句 
 		 delete from student where id=5; //删除id=5的数据
+	23:模糊查询 更高效
+		select * from blog where title like  "%vue%" order by id desc limit 0 ,3
+		select * from blog where locate('vue',title)>0  order by id desc limit 0,5 更高效

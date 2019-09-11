@@ -1,26 +1,26 @@
 function storeInit(initState){
-	var state=initState||{};
-	var funcList=[];
+	var  state=initState||{};
+	var funclist=[];
 	function getState(type){
 		return state[type];
 	}
-	function disPatch(action){
-		state[action['type']]=action.value;         
-		for(var i=0;i<funcList.length;i++){
-			funcList[i]();
-		}
-	}
 	function subscribe(func){
-		funcList.push(func);
+		funclist.push(func);
+	}
+	function dispatch(action){
+		state[[action.type]]=action.value;
+		for(var i=0;i<funclist.length;i++){
+			funclist[i]();
+		}
 	}
 	return {
 		getState:getState,
-		disPatch:disPatch,
-		subscribe:subscribe
+		subscribe:subscribe,
+		dispatch:dispatch
 	}
 }
 
-var store=storeInit({
-	text:'',
-	type:'all'
+var  store=storeInit({
+	type:'all',
+	name:''
 })

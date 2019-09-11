@@ -123,6 +123,9 @@
 	31:curl(curl需要安装)
 		curl www.baidu.com 会返回百度首页的html内容
 		curl -i wwww.baidu.com 返回http的协议头和内容
+	32:sudo systemctl status firewalld 查看防火墙状态
+	33:sudo systemctl stop firewalld 关闭防火墙
+	34:sudo systemctl start firewalld 开启防火墙
 ## http协议
 	五层网路协议,七层网路协议
 	五层网络协议:
@@ -256,6 +259,29 @@
 					 'E:\\Works\\node_modules',
 					 'E:\\node_modules' ] 
 			}
+	5:linux安装rar解压工具
+		rar系统工具：
+		
+		wget http://www.rarlab.com/rar/rarlinux-3.8.0.tar.gz
+		
+		tar -zxvf rarlinux-3.8.0.tar.gz
+		
+		cd rar
+		
+		su root
+		
+		make
+		
+		make install
+		
+		exit
+		
+		
+		具体使用看看help就知道
+		
+		例如解压到当前文件夹
+		
+		rar e sqlite-3_7_3.rar
 ### NodeJsApi
 #### net 网络 (TCP/IPC层)
 	1:socket 

@@ -10,24 +10,25 @@ var oUl=document.getElementsByTagName('ul')[0];
 var btnArray=[].slice.call(document.getElementsByClassName('btn'),0);
 var oInput=document.getElementsByTagName('input')[0];
 var lastActiveBtn=btnArray[2];
-
 renderPage(personArr);
+
 store.subscribe(function(){
-	renderPage(combineFilterArr(personArr))
+	renderPage(filterArray(personArr))
 })
 btnArray.forEach(function(ele,index,self){
-	ele.onclick=function () {
+	ele.onclick=function(){
 		changeActive(this);
-		store.disPatch({
+		store.dispatch({
 			type:'type',
 			value:this.getAttribute('sex')
 		})
 	}
 })
-var  timer=null;
-oInput.oninput=debounce(function(){
-	store.disPatch({
-		type:'text',
+
+oInput.oninput=function(){
+	store.dispatch({
+		type:'name',
 		value:this.value
 	})
-},500)
+}
+
