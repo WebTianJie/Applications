@@ -1,26 +1,34 @@
-function storeInit(initState){
-	var  state=initState||{};
-	var funclist=[];
-	function getState(type){
-		return state[type];
-	}
-	function subscribe(func){
-		funclist.push(func);
-	}
-	function dispatch(action){
-		state[[action.type]]=action.value;
-		for(var i=0;i<funclist.length;i++){
-			funclist[i]();
-		}
-	}
-	return {
-		getState:getState,
-		subscribe:subscribe,
-		dispatch:dispatch
-	}
+/**
+
+ * author  张高瑞 创建
+
+ * date 2019-09-13 17:16
+ * 状态管理
+ */
+
+function storeInit(initState) {
+    var state=initState || {};
+    var funcList=[];
+    function getState(type){
+        return state[type];
+    }
+    function dispatch(action){
+        initState[action['type']]=action.value;
+        for(var i=0; i<funcList.length;i++){
+            funcList[i]();
+        }
+    }
+    function subscribe(func){
+        funcList.push(func);
+    }
+    return {
+        getState:getState,
+        subscribe:subscribe,
+        dispatch:dispatch
+    }
 }
 
-var  store=storeInit({
-	type:'all',
-	name:''
+var  store= storeInit({
+    text:'',
+    sex:'all'
 })

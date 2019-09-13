@@ -11,24 +11,33 @@ var btnArray=[].slice.call(document.getElementsByClassName('btn'),0);
 var oInput=document.getElementsByTagName('input')[0];
 var lastActiveBtn=btnArray[2];
 renderPage(personArr);
-
 store.subscribe(function(){
-	renderPage(filterArray(personArr))
+	renderPage(lastFilterArr(personArr));
 })
-btnArray.forEach(function(ele,index,self){
-	ele.onclick=function(){
-		changeActive(this);
+btnArray.forEach(function(item,index,self){
+	item.onclick=function(){
 		store.dispatch({
-			type:'type',
+			type:'sex',
 			value:this.getAttribute('sex')
 		})
-	}
+		changeActive(this);
+	};
 })
 
 oInput.oninput=function(){
 	store.dispatch({
-		type:'name',
+		type:'text',
 		value:this.value
 	})
 }
+
+
+
+
+
+
+
+
+
+
 
