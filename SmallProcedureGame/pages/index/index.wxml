@@ -1,0 +1,57 @@
+<import src="/template/list.wxml"/>
+<view class="container0">
+  <!-- 横向菜单 -->
+
+  <!-- 搜索 -->
+  <view class="search">
+      <scroll-view class="serach-view" scroll-x>
+         <view class="search-item">
+            <block wx:for="{{newArr}}" wx:key="{{item}}">
+              <navigator url="{{item.link}}">{{item.title}}</navigator>
+            </block>
+         </view>
+      </scroll-view>
+  </view>
+  <!-- 轮播图 -->
+  <view class="ads" >
+    <swiper class="for-tu" autoplay>
+      <swiper-item  wx:for="{{flashArr}}" wx:key="{{item}}">
+       <image src='{{item.imgSrc}}' title="{{item.title}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 栏目 -->
+  <view class="outerView">
+        <view   wx:for="{{classArr}}" wx:key="{{item}}" class="innerView">
+         <navigator url="{{item.url}}">
+          <image src="{{item.icon}}"></image>
+          <view class="inner-fnt">{{item.title}}</view>
+         </navigator>
+      </view>
+  </view>
+  <!-- 动态导航 滑动 -->
+  <scroll-view scroll-x>
+      <view class="scroll-view">
+        <view class="innerView" wx:for="{{navArr}}" wx:key="{{item}}">
+          <navigator url="{{item.url}}">
+            <image src="{{item.icon}}"></image>
+            <view class="inner-fnt">{{item.title}}</view>
+          </navigator>
+        </view>
+      </view>
+  </scroll-view>
+  <!-- 游戏列表1 -->
+  <view>
+    <template is="listTemp" data="{{gameArr}}" />  
+  </view>
+   <!-- 广告 -->
+  <view class="ad">
+    <image class="ad-imgage" src="http://img2.imgtn.bdimg.com/it/u=3787186969,2280991835&fm=26&gp=0.jpg"></image>
+   </view>
+   <!-- 游戏列表2 -->
+  <view>
+    <template is="listTemp" data="{{gameArr}}" />  
+  </view>
+  <!-- 底部版权 -->
+  <include src="/template/footer.wxml" />
+</view>
