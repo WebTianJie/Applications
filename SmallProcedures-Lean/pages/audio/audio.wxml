@@ -1,0 +1,8 @@
+
+<view class="container0">
+  <audio controls src="{{src}}" id="myAudio" author="{{author}}" name="{{name}}" poster="{{poster}}"></audio>
+  <button type="primary" bindtap="play">播放</button>
+  <button type="primary" bindtap="stop">暂停</button>
+  <button type="primary" bindtap="setTime">设置播放时间</button>
+  <button type="primary" bindtap="backStart">回到开头</button>
+</view> 

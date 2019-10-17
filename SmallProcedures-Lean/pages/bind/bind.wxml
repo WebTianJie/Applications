@@ -1,0 +1,13 @@
+<!--pages/bind/bind.wxml-->
+<text>name:{{studentName}}</text>
+<text>age:{{studentAge}}</text>
+<text class="{{flag?'color-red':'color-green'}}">
+  score:90
+</text>
+<view wx:for="{{arr}}" wx:key="{{item}}">
+ 111
+</view>
+
+<view hidden>
+    546546
+</view>

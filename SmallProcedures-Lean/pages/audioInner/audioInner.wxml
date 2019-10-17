@@ -1,0 +1,10 @@
+<view class="audioPause" wx:if="{{isPlay==false}}" bindtap="play">
+  <image class="audio-stop-img" src="http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000"></image>
+  <image class="audio-play-img" src="/image/play.png" ></image>
+</view>
+<!-- 当前为播放状态 -->
+<view class="audioPlay" wx:if="{{isPlay==true}}" bindtap="pause">
+      <image class="audio-stop-img" src="http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000"></image>
+  <image class="audio-play-img" src="/image/stop.png" ></image>
+</view>
+<slider class="slide-cls"></slider>

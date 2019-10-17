@@ -1,0 +1,70 @@
+<!-- 一般用法 -->
+<template name="studentInfo">
+  <view>
+    姓名:{{student.name}}
+  </view>
+  <view>
+    年龄:{{student.age}}
+  </view>
+</template>
+<template is="studentInfo" data="{{student}}" />
+<!-- 解构用法 -->
+<template name="studentInfo1">
+  <view>
+    姓名:{{name}}
+  </view>
+  <view>
+    年龄:{{age}}
+  </view>
+</template>
+<template is="studentInfo1" data="{{...student}}" />
+<!-- 一般用法 -->
+<template name="studentInfo2">
+  <block wx:for="{{stuArr}}" wx:key="{{item}}">
+    <view>
+      姓名:{{item.name}}02
+    </view>
+    <view>
+      年龄:{{item.age}}02
+    </view>
+  </block>
+</template>
+<template is="studentInfo2" data="{{stuArr}}" />
+
+<!-- 循环模板用法 -->
+<template name="studentInfo3">
+    <view>
+      姓名:{{item.name}}
+    </view>
+    <view>
+      年龄:{{item.age}}
+    </view>
+</template>
+<view  wx:for="{{stuArr}}" wx:key="{{item}}">
+  <template is="studentInfo3" data="{{item}}" />  
+</view>
+<!-- 解构用法 -->
+<template name="studentInfo4">
+    <view>
+      姓名:{{name}}
+    </view>
+    <view>
+      年龄:{{age}}
+    </view>
+</template>
+<view  wx:for="{{stuArr}}" wx:key="{{item}}">
+  <template is="studentInfo4" data="{{...item}}" />  
+</view>
+
+
+<!-- 引用模板 -->
+<import src="/template/studentInfo.wxml"/>
+
+<!-- 使用模板 -->
+<view  wx:for="{{stuArr}}" wx:key="{{item}}">
+  <template is="studentInfo5" data="{{...item}}" />  
+</view>
+<!--引入模板 -->
+<!-- 包含模板里面不可有template模板 -->
+<include src="/template/include.wxml" />
+

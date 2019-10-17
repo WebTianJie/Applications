@@ -1,0 +1,29 @@
+<view class="container0">
+  <view class="search">
+    <scroll-view scroll-x>
+      <view class="nav">
+       <block wx:for="{{navigatorArr}}" wx:key="{{item}}">
+          <view class="{{classArr[index]}}" data-index="{{index}}" bindtap="changeActive">{{item.title}}</view>
+       </block>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+<view>
+<swiper current="{{currIndex}}" style="height:{{swiperHeight}}rpx">
+  <swiper-item class="red">
+    <view>11</view>
+    <view>112</view>
+    <view>113</view>
+    <view>114</view>
+    <view>115</view>
+    <view>116</view>
+    <view>117</view>
+    <view>118</view>
+    <view>119</view>
+  </swiper-item>
+  <swiper-item class="green">12</swiper-item>
+  <swiper-item class="yellow">13</swiper-item>
+</swiper>
+</view>

@@ -1,0 +1,69 @@
+<view>
+  <scroll-view class="background-scroll" scroll-x>
+    <view class="nav">
+      <navigator url="">国际新闻</navigator>
+      <navigator url="">国内新闻</navigator>
+      <navigator url="">社会新闻</navigator>
+      <navigator url="">娱乐新闻</navigator>
+      <navigator url="">IT新闻</navigator>
+      <navigator url="">八卦新闻</navigator>
+    </view>
+  </scroll-view>
+</view>
+<view>
+ <swiper current="1" bindchange="changeCurrent" autoplay interval="2000" duration="700" circular indicator-dots>
+    <swiper-item>
+      <navigator url="/pages/about/about">
+        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571130748624&di=cf3b9e291be38dc5af4d9624bfd85951&imgtype=0&src=http%3A%2F%2Fpic2.16pic.com%2F00%2F01%2F24%2F16pic_124090_b.jpg" ></image>
+      </navigator>
+    </swiper-item>
+    <swiper-item>
+      <navigator>
+        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571130748624&di=fc52dc00493f3882484a2cb1dceff445&imgtype=0&src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20100505%2F20100505154727-2016523917.jpg"></image>
+      </navigator>
+    </swiper-item>
+ </swiper>
+</view>
+<!-- 新闻列表 -->
+<swiper>
+  <swiper-item>
+    <view class="view-con">
+      <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571130748624&di=fc52dc00493f3882484a2cb1dceff445&imgtype=0&src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20100505%2F20100505154727-2016523917.jpg" class="img"></image>
+      <view>
+        <view class="news-title">学习标题01</view>
+        <text class="fnt-content">微信课程,滑块学习</text>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+      <view class="view-con">
+        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571130748624&di=fc52dc00493f3882484a2cb1dceff445&imgtype=0&src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20100505%2F20100505154727-2016523917.jpg" class="img"></image>
+        <view>
+          <view class="news-title">学习标题02</view>
+          <text class="fnt-content">微信课程,滑块学习</text>
+        </view>
+      </view>
+  </swiper-item>
+</swiper>
+
+<scroll-view scroll-x>
+  <view class="view-container">
+      <view class="view-con">
+        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571130748624&di=fc52dc00493f3882484a2cb1dceff445&imgtype=0&src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20100505%2F20100505154727-2016523917.jpg" class="img"></image>
+        <view>
+          <view class="news-title">学习标题01</view>
+          <text class="fnt-content">微信课程,滑块学习</text>
+        </view>
+      </view>
+        <view class="view-con">
+          <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571130748624&di=fc52dc00493f3882484a2cb1dceff445&imgtype=0&src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20100505%2F20100505154727-2016523917.jpg" class="img"></image>
+          <view>
+            <view class="news-title">学习标题02</view>
+            <text class="fnt-content">微信课程,滑块学习</text>
+          </view>
+        </view>
+  </view> 
+</scroll-view>
+
+
+

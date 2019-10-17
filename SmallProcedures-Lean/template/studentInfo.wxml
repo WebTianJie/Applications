@@ -1,0 +1,8 @@
+<template name="studentInfo5">
+    <view>
+      姓名:{{name}} 我是外面引入的模板
+    </view>
+    <view>
+      年龄:{{age}} 我是外面引入额模板
+    </view>
+</template>
