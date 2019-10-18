@@ -46,6 +46,7 @@ export function  renderData(vm,data){
 export function renderNode(vm,vnode){
 	if(vnode.nodeType==3){
 		let template=vnode2Template.get(vnode);
+		console.log('template',template);
 		if(template){
 			let result=vnode.text;
 			for(let i=0;i<template.length;i++){

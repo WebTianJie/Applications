@@ -1,10 +1,9 @@
 {
   "pages": [
-    "pages/test/test",
     "pages/cateloglist/cateloglist",
-    "pages/index/index",
-    "pages/mark/mark",
     "pages/type/type",
+    "pages/mark/mark",
+    "pages/index/index",
     "pages/search/search"
   ],
   "window": {

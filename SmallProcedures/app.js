@@ -1,4 +1,7 @@
 App({
+  onShow(res){
+    console.log(res);
+  },
   /**
        * 设置监听器
        */

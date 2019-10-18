@@ -28,7 +28,6 @@ function inserStudent(stu_num,name,age,stu_class,math,pwd,success){
 	})
 	connection.end();
 }
-
 function queryStudentByNum(stu_num,success){
 	var sql='select id,pwd from student where stu_num=?';
 	var params=[stu_num];

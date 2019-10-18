@@ -13,4 +13,3 @@ export function isTrue(expression,env){
 	eval(code);
 	return bool;
 }
-

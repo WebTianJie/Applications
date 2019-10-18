@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+function Parent(name,age) {
+    this.name=name;
+    this.age=age;
+    this.money=[1000];
+    this.sayHellow=function (){
+        console.log('我是'+this.name,'我今年'+this.age+'岁了');
+    }
+}
+Parent.prototype.makeMoney=function(){
+    this.money.push(money);
+}
+
+function  Son(name,age) {
+    Parent.call(this,name,age);
+    this.name=name;
+    this.age=age;
+}
+
+var son=new Son('小明',22);
+console.log(son.age,son.name);
+console.log(son.money)
+son.makeMoney(2000);
+son.sayHellow();
+</script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>这是我的Aue</title>
+    <style>
+        .red{color:red;font-size:30px;}
+        .green{color:green;font-size:12px;}
+    </style>
+</head>
+<body>
+<div id="test">
+    你好啊,{{content}} {{des}}<br>
+    <span>{{des}}</span><br>
+    <span>{{obj.x}}</span>
+    <input type="text" v-on:keydown="enter" v-model="obj.x">{{obj.x}}
+    <ul>
+        <li v-for="(item,index) in list">{{item.name}} {{item.age}}</li>
+    </ul>
+    <img v-bind:src="imgSrc" alt="">
+    <span v-bind:class="red">哈哈</span><br>
+    <span v-bind:class="{red:obj.x<2,green:obj.x>2}">嗯嗯</span>
+</div>
+</body>
+<script type="module">
+    import Aue from './core/index.js'
+    window.test=new Aue({
+        el:'test',
+        data:{
+            content:'北冥',
+            des:'这是我的第一个信息',
+            obj:{
+                x:3,
+                y:2
+            },
+            list:[{name:'淋淋',age:18},{name:'丽丽',age:19}],
+            imgSrc:'img/1.jpg',
+            red:'red',
+            green:'green'
+        },
+        computed:{
+
+        },
+        methods:{
+            enter:function(e){
+                console.log(this);
+            }
+        },
+        created:function(){
+            console.log('创建完成了');
+        }
+    })
+
+</script>
+</html>
