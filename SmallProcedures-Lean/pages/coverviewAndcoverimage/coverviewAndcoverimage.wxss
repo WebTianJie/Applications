@@ -1,0 +1,8 @@
+.img{width:100rpx;height:100rpx;}
+.videoScreen{width:100%;position: relative;}
+.play,.pause{
+  position: absolute;
+  left: 25rpx;
+  top:100rpx;
+  z-index: 100;
+}

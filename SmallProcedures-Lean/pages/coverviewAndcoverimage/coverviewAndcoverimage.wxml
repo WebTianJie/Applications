@@ -1,0 +1,10 @@
+<view>cover-view覆盖在组件上的操作</view>
+<video id="myvideo" class="videoScreen"  >
+  <cover-view class="pause" wx:if="{{play}}" bindtap="play">
+    <cover-image class="img" src="/image/pause.png"></cover-image>
+  </cover-view>
+  <cover-view class="play" wx:if="{{!play}}" bindtap="pause">
+    <cover-image class="img" src="/image/play.png" ></cover-image>
+  </cover-view>
+  </video>
+
