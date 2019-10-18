@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/moveableDemo/moveableDemo",
+    "pages/coverviewAndcoverimage/coverviewAndcoverimage",
+    "pages/moveareaAndmoveview/moveareaandmoveview",
     "pages/video/video",
     "pages/audioInner/audioInner",
     "pages/audio/audio",
