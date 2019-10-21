@@ -1,0 +1,9 @@
+<view>
+  <view>富文本编辑器 nodes=strings</view>
+  <rich-text nodes="{{strings}}"></rich-text>
+</view>
+
+<view>
+  <view>富文本编辑器 nodes=array</view>
+  <rich-text nodes="{{nodesArr}}"></rich-text>
+</view>

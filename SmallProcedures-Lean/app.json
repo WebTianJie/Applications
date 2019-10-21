@@ -1,5 +1,9 @@
 {
   "pages": [
+    "pages/usercenterDemo/usercenterDemo",
+    "pages/form/form",
+    "pages/progress/progress",
+    "pages/richtext/richtect",
     "pages/moveableDemo/moveableDemo",
     "pages/coverviewAndcoverimage/coverviewAndcoverimage",
     "pages/moveareaAndmoveview/moveareaandmoveview",
