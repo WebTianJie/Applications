@@ -1,65 +1,53 @@
-<form bindsubmit="formSubmit" bindreset="formReset">
-  <view>button</view>
-  <button size="mini">按钮</button>
-  <button size="mini" type="primary">按钮</button>
-  <button size="mini" type="warn">按钮</button>
-  <button size="mini" type="primary" plain>按钮</button>
-  <button size="mini" type="primary" disabled="{{false}}">按钮</button>
-  <button size="mini" type="primary" disabled="{{true}}" loading="{{true}}">按钮</button>
-  <button size="mini" type="primary" lang="en">按钮</button>
-  <button size="mini" type="primary" bindgetphonenumber="phone">按钮</button>
-  <view>checkbox</view>
-  <checkbox-group bindchange='checkbind'>
-    <checkbox value="1011">1011</checkbox>
-    <checkbox value="1012" checked>1012</checkbox>
-  </checkbox-group>
-  <checkbox-group bindchange="checkChange">
-    <label wx:for="{{items}}" wx:key="{{index}}">
-      <checkbox value="{{item.name}}" checked="{{item.checked}}">{{item.name}}</checkbox>
-    </label>
-  </checkbox-group>
-  <view>editor</view>
-  <editor placeholder="this is a editor" id="editor" showImgToolbar showImgSize showImgResize bindstatuschange="statusChange"></editor>
-  <input placeholder="name" maxlength="" focus placeholder-style="color:red" bindinput="inputBind" bindfocus="getFocus" bindblur="blur" bindconfirm="confirm" placeholder-class="bg"></input>
-  <view>radio</view>
-  <radio-group bindchange='radioChange'>
-    <view wx:for="{{radioArr}}" wx:key="{{index}}">
-      <label for="{{item.name}}">点赞</label>
-      <radio id="{{item.name}}" value="{{item.name}}" name="{{item.name}}" checked="{{item.checked}}">{{item.value}}</radio>
-    </view>
-  </radio-group>
-
-  <view>picker</view>
-  <picker bindchange="pickChange" mode="selector" value="{{index}}" range="{{country}}">
-    <view>当前选择:{{country[index]}}</view>
-  </picker>
-  <view>多列选择器:</view>
-  <picker mode="multiSelector" bindchange="multiChange" bindcolumnchange="coloumnChange" value='{{multiIndex}}' range="{{multiArray}}" >
-    <view>当前选择:{{multiArray[0][multiIndex[0]]}}</view>
-  </picker>
-  <view>时间</view> 
-  <picker mode='time' start='09:00' end="21:00" bindchange="timeChange" >
-    <view>当前时间:{{time}}</view>
-  </picker>
-  <picker mode='date' start='2015-09-10' end='2100-09-10' bindchange="dateChange">
-      <view>当前日期:{{date}}</view>
-  </picker>
-  <view>省市选择</view>
-  <picker mode='region' bindchange="cityChange">
-    <view>当前选择:{{city}}</view>
-  </picker>
-
-
- <view>slide滑动选择器</view>
- <view>设置step</view>
- <slider step="5" bindchange="slideChane" show-value min="50" max="200"></slider>
-</form>
-
-
- <view>switch</view>
- <switch bindchange="switchChange"></switch>
- <switch checked bindchange="switchChange"></switch>
- <view>textarea</view>
- <view>
-   <textarea value="this is textarea" bindblur="areaChange" auto-height auto-focus="true"></textarea>
- </view>  
+<view class="container">
+  <view class="page">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="area">
+         <label class="model">
+          <text>name:</text>
+          <input class="input" bindblur="nameBlur" name="personName" ></input>
+         </label>
+         <label class="model">
+          <text>password:</text>
+          <input class="input" bindblur="pwdBlur" name="personPassword" ></input>
+         </label>
+         <label class="model">
+          <text>sex:</text>
+          <radio-group class="control-center" bindchange="radioChange">
+           <radio value="1" checked>male</radio>
+           <radio value="0">female</radio>
+          </radio-group>
+         </label>
+         <label class="model">
+          <text>hobby:</text>
+          <checkbox-group class="control-center" bindchange="checkChange">
+            <checkbox value="tour">tour</checkbox>
+            <checkbox value="book" checked>book</checkbox>
+            <checkbox value="game">game</checkbox>
+          </checkbox-group>
+         </label>
+         <label class="model">
+            <text >birthday:</text>
+            <picker mode="date" bindchange="dateChange">
+                <view>chooseDate:{{birthday}}</view>
+            </picker>
+         </label>
+         <label class="model">
+            <text>study years</text>
+            <slider step="1" value="{{studay}}" show-value bindchange="slideChange"></slider>
+         </label>
+         <label class="model">
+            <view>
+              isMember
+              <switch checked="{{isMember}}" bindchange="isMember"></switch>
+            </view>
+         </label>
+         <label class="model">
+            <text>agreementing</text>
+            <textarea placeholder="this is personReg please read it first" class="teatarea control-center"></textarea>
+         </label>
+         <button size="defalut" form-type="submit">submit</button>
+         <button size="default" form-type="reset">reset</button>
+      </view>
+  </form>
+  </view>
+</view>

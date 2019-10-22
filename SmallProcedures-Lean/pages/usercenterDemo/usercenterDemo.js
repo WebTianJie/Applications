@@ -5,130 +5,94 @@ Page({
    * 页面的初始数据
    */
   data: {
-    city:['','',''],
-    date:'',
-    time:'',
-    multiIndex:[0,0,0],
-    index:0,
-    multiArray:[
-      ['中国','北京'],
-      ['美国','纽约'],
-      ['日本','大阪'],
-      ['英国','伦敦','开普勒']
-    ],
-    country: ['中国','美国','日本','英国'],
-    radioArr:[
-      {name:'top',checked:false,value:'top'},
-      { name: 'tom', checked: false, value: 'tom' },
-      { name: 'lily', checked: true, value: 'lily' },
-      { name: 'judy', checked: false, value: 'judy' }
-    ],
-    items:[
-      {
-        name:'top',value:'CHA'
-      },
-      {
-        name: 'alis', value: 'CHA'
-      },
-      {
-        name: 'tom', value: 'CHA',checked:true
-      },
-      {
-        name: 'lyly', value: 'CHA'
-      }
-      
-    ]
+      personName:'',
+      password:'',
+      sex:'',
+      hobby:'',
+      birthday:'',
+      studay:'',
+      isMember:'',
+      agreementing:''
   },
   /**
-   * 开关
+   * 姓名:
    */
-  switchChange(e){
-      console.log(e);
-  },
-  /**
-   *slidechange 
-   */
-  slideChane(e){
-    console.log(e);
-  },
-  /**
-   * picker行变化
-   */
-  multiChange(e){
-    console.log(e);
-  },
-  /***
-   * picker列变化
-   */
-  coloumnChange(e){
-      console.log(e);
-  },
-  /**
-   * 时间变化
-   */
-  timeChange(e){
-      console.log(e);
-      this.setData({
-        time:e.detail.value
-      })
-  },
-  /***
-   * 城市选择
-   */
-  cityChange(e){
-    console.log(e);
+  nameBlur(e){
     this.setData({
-      city:e.detail.value
-    })
-  },
-  /**
-   * 日期变化
-   */
-  dateChange(e){
-    console.log(e);
-    this.setData({
-      date:e.detail.value
+      personName:e.detail.value
     })
   },
   /***
-   * 选择以后
+   * pwd
    */
-  pickChange(e){
-      console.log(e.detail.value);
-      this.setData({
-        index:e.detail.value
-      })
-      console.log(this.data.index);
+  pwdBlur(e){
+    this.setData({
+      password: e.detail.value
+    })
   },
-  /***
-   * 单选框
+  /**
+   * 性别
    */
   radioChange(e){
-    console.log(e);
+    this.setData({
+      sex: e.detail.value==1?'male':'female'
+    })
   },
   /***
-   * 复选框按钮
+   *爱好
    */
-  checkChange(){
-
+  checkChange(e){
+    this.setData({
+      hobby:e.detail.value
+    })
   },
   /***
-   * 
+   * 生日
    */
-  statusChange(e){
-    console.log(e);
+  dateChange(e){
+    this.setData({
+      birthday:e.detail.value
+    })
+  },
+  /**
+   * 学习时间
+   */
+  slideChange(e){
+    this.setData({
+      studay:e.detail.value
+    })
+  },
+  /**
+   * 会员判断
+   */
+  isMember(e){
+    this.setData({
+      isMember:e.detail.value
+    })
   },
   /***
-   * 鼠标离开
+   * 表单重置
    */
-  blur(){
-
+  formReset(){
+    console.log('reset');
   },
   /***
-   * 获取焦点
+   * 表单提交
    */
-  getFocus(){
-
+  formSubmit(){
+    console.log(0);
+    let member={
+      personName:this.data.personName,
+      sex:this.data.sex,
+      hobby:this.data.sex,
+      birthday:this.data.birthday,
+      studay:this.data.studay,
+      isMember:this.data.isMember,
+      agreementing:this.data.agreementing
+     }
+     //向服务器提交
+     //向云端提交
+     console.log(member);
   },
   /**
    * 生命周期函数--监听页面加载
@@ -136,12 +100,7 @@ Page({
   onLoad: function (options) {
 
   },
-  /***
-   * 获取电话号码
-   */
-  phone(){
 
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
