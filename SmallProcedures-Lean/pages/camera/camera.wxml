@@ -1,0 +1,7 @@
+
+<view>
+  <camera frame-size="large" mode="normal" device-position="back" flash="auto" style="width:100%;height:600rpx;"></camera>
+  <button type="primary" bindtap="takePhoto">拍照</button>
+  <image src="{{src}}"></image>
+  <!-- <camera frame-size="scanCode" mode="normal" device-position="back" flash="auto" style="width:100%;height:600rpx;"></camera> -->
+</view>

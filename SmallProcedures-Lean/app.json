@@ -1,5 +1,10 @@
 {
   "pages": [
+    "pages/open-data/opendata",
+    "pages/canvas/canvas",
+    "pages/tuya/tuya",
+    "pages/mapdemo/mapdemo",
+    "pages/tencentmap/tencentmap",
     "pages/caneraDemo/cameraDemo",
     "pages/camera/camera",
     "pages/navgator/navgator",

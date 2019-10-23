@@ -1,0 +1,9 @@
+<navigator target="self" url="/pages/about/about" open-type="redirect">跳转操作redirect</navigator>
+<navigator target="self" url="/pages/about/about" open-type="navigate">跳转操作navigate</navigator>
+<navigator target="self" url="/pages/usercenterDemo/usercenterDemo" open-type="switchTab">跳转操作switchTab</navigator>
+<navigator target="self" url="/pages/about/about" open-type="reLauunch">跳转操作reLauunch</navigator>
+<navigator target="self" url="/pages/about/about" open-type="navigateBack">跳转操作reLauunch</navigator>
+<navigator target="miniProgram" open-type="exit">小程序调换</navigator>
+
+<button bindtap="tapNivator">tabba跳转</button>
+<button bindtap="otherNigator">跳转other</button>

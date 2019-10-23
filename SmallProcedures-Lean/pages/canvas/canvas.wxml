@@ -1,0 +1,30 @@
+
+<view class="container">
+  <!-- 画布区域 -->
+  <view class="canvas-area">
+     <!-- 同一个页面中canvas-id不可重复,如果过重复了将会隐藏不工作 -->
+     <canvas
+     canvas-id="myCanvas"
+     class="myCanvas"
+     disable-scroll="false"
+     bindtouchstart="touchStart"
+     bindtouchmove="touchMove"
+     bindtouchend="touchEnd"
+     ></canvas>
+  </view>
+  <!-- 画布工具区域 -->
+  <view class="canvas-tools">
+      <!-- 细画笔 -->
+      <view class="box box1" data-brush='5'  bindtap="selectBrush"></view>
+      <!-- 粗画笔 -->
+      <view class="box box2" data-brush="15"  bindtap="selectBrush"></view>
+      <!-- 黄色笔 -->
+      <view class="box box3" data-color="yellow"  bindtap="selectColor"></view>
+      <!-- 红色笔 -->
+      <view class="box box4"  data-color='red' bindtap="selectColor"></view>
+      <!-- 橡皮 -->
+      <view class="box box5" bindtap="clearCanvas"></view>
+
+  </view>
+ 
+</view>

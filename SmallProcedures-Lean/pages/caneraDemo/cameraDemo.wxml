@@ -1,0 +1,8 @@
+
+  <camera class="camera-cls" device-position="front" flash="off"  >
+     <cover-view class="main-tips">photo</cover-view>
+     <cover-image class="cover-img" src="/image/rx.png"></cover-image>
+     <cover-image class="hd" bindtap="takePhoto" src="/image/hd.png"></cover-image>
+  </camera>
+
+
