@@ -1,0 +1,31 @@
+page{
+  background-color: #f2f2f2;
+}
+.arc_title{
+  text-align: center;
+  width: 100%;
+  height: 100rpx;
+  box-sizing: border-box;
+  background-color:grey;
+  line-height:100rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.comment-area{padding:30rpx;color:#858585;}
+.comment-title{
+  display: flex;
+  justify-content: space-between;
+}
+.comment-content{padding-top:60rpx;}
+.row{display: flex;}
+.right{width: 100%;padding-left: 20rpx;}
+.wguest{color:#3c6289;font-weight: 500;}
+.contents{color:#222;padding-top: 6rpx;padding-right:15rpx;}
+.avatar{display: flex;justify-content: space-between;}
+.avatar image{
+  margin-top: 6rpx;
+  width:60rpx;
+  height:60rpx;
+}
+.contents-title {display: flex;justify-content: space-between;}
+.contents-title .fabulous{color:#3c6289;font-size: 28rpx;}

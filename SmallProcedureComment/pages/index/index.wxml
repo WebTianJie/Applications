@@ -1,0 +1,25 @@
+<view class="box">
+    <view class="arc_title">文章标识</view>
+    <view class="comment-area">
+        <view class="comment-title">
+            <view>精选留言</view>
+            <view>
+              <navigator class="wguest" url="/pages/guest.guest">写留言</navigator>
+            </view>
+        </view>
+        <view class="comment-content">
+            <view class="row">
+                <view class="avatar" >
+                  <image src="{{userInfo.avatarUrl}}"></image>
+                </view>
+                <view class="right" >
+                    <view class="contents-title">
+                        <text class="nickname" >{{userInfo.nickName}}</text>
+                        <view class="fabulous">赞 10</view>
+                    </view>
+                    <view class="contents">这是一篇很好的文章这是一篇很好的文章这</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
