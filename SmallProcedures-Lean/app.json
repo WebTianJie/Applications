@@ -1,5 +1,10 @@
 {
   "pages": [
+    "pages/robotDemo/robotDemo",
+    "pages/uplaodFile/uploadFile",
+    "pages/downLoadFile/downLoadFile",
+    "pages/requestDemo/requestDemo",
+    "pages/webview/webview",
     "pages/open-data/opendata",
     "pages/canvas/canvas",
     "pages/tuya/tuya",

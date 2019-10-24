@@ -1,0 +1,3 @@
+<button bindtap="downLoadFile">下载</button>
+<progress show-info percent="{{percent}}"></progress>
+<image src="{{src}}"></image>

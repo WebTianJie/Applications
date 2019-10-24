@@ -1,0 +1,32 @@
+<view class="top">{{title}}</view>
+<view class="que">
+  <block>
+    <view class="con" wx:for='{{syas}}' wx:for-item="item" wx:key="{{syas}}">
+      <view class="isSay">
+        <view class="r-t">
+          <text>{{item.isay}}</text>
+        </view>
+        <view class="r-i">
+          <image src="{{headerRight}}"></image>
+        </view>
+      </view>
+      <view class="robot">
+        <view class="l-i">
+          <image src="{{headerLeft}}"></image>
+        </view>
+        <view class="l-t">
+          <text>{{item.robot}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<view class="send">
+  <view class="input" >
+    <form bindsubmit="converSation">
+      <input class="text" name='says' placeholder="输入点什么吧"></input>
+      <button class="btn"  id="btn" form-type="submit">发送</button>
+      <button class="btn-d" bindtap="deleteChat">清空</button>
+    </form>
+  </view>
+</view>
