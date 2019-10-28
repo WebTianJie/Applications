@@ -1,5 +1,9 @@
 {
   "pages": [
+    "pages/RecorderDemo/recorderDemo",
+    "pages/getReorderManager/getReorderManager",
+    "pages/recoder/reocder",
+    "pages/websocket/websocket",
     "pages/robotDemo/robotDemo",
     "pages/uplaodFile/uploadFile",
     "pages/downLoadFile/downLoadFile",

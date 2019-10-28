@@ -1,0 +1,7 @@
+<view class="page">
+  <rich-text class="content-area" nodes="{{respnoseMessage}}"></rich-text>
+  <view class="send-message-area">
+    <input class="send-message" bindblur="recodeMessage"></input>
+    <button bindtap="senMsg">聊天</button>
+  </view>
+</view>

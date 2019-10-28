@@ -1,0 +1,25 @@
+<scroll-view>
+  <view wx:if="{{voices}}" class="common-list">
+    <block wx:for="{{voices}}" wx:key="{{index}}">
+      <view class="board">
+        <view class="cell">
+          <view class="cell-db" bindtap="gotoPlay" data-key="{{item.filePath}}">
+            <view class="path">存储路径:{{item.filePath}}</view>
+            <view class="date">存储时间:{{item.ctime}}</view>
+            <view class="size">音频大小:{{item.size}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</scroll-view>
+<view wx:if="{{isSpeaking}}" class="speak-style">
+  <image  class="sound-style" src="/image/voice_icon_speech_sound_1.png"></image>
+  <image wx:if="{{j==2}}" class="sound-style" src="/image/voice_icon_speech_sound_2.png"></image>
+  <image wx:if="{{j==3}}" class="sound-style" src="/image/voice_icon_speech_sound_3.png"></image>
+  <image wx:if="{{j==4}}" class="sound-style" src="/image/voice_icon_speech_sound_4.png"></image>
+  <image wx:if="{{j==5}}" class="sound-style" src="/image/voice_icon_speech_sound_5.png"></image>
+</view>
+<view class="record-style">
+  <button class="btn-style" bindtouchstart="touchStart" bindtouchend="touchEnd">按住录音</button>
+</view>
