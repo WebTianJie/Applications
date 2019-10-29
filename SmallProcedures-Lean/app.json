@@ -1,5 +1,11 @@
 {
   "pages": [
+    "pages/my-music/my-music",
+    "pages/appmusic/appmusic",
+    "pages/loadFont/index",
+    "pages/baidumusic/baidumusic",
+    "pages/managerbackgroundmusic/managerbackgroundmusic",
+    "pages/backgroundmusic/backgroundmusic",
     "pages/RecorderDemo/recorderDemo",
     "pages/getReorderManager/getReorderManager",
     "pages/recoder/reocder",
@@ -39,7 +45,11 @@
     "pages/logs/logs",
     "pages/about/about",
     "pages/formbutton/formbutton",
-    "pages/caneraDemo/photo"
+    "pages/caneraDemo/photo",
+    "pages/search/search",
+    "pages/for-you/for-you",
+    "pages/explore/explore",
+    "pages/broadcast/broadcast"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -50,22 +60,43 @@
     "backgroundColor": "#ddd"
   },
   "tabBar": {
-    "selectedColor": "green",
-    "borderStyle": "black",
+    "selectedColor": "#ff0000",
     "list": [
       {
-        "pagePath": "pages/usercenterDemo/usercenterDemo",
-        "text": "首页",
-        "iconPath": "/image/icon_1.png",
-        "selectedIconPath": "/image/icon_11.png"
+        "pagePath": "pages/my-music/my-music",
+        "text": "我的音乐",
+        "iconPath": "image/tabbar/1.png",
+        "selectedIconPath": "image/tabbar/1-hl.png"
       },
       {
-        "pagePath": "pages/about/about",
-        "text": "日志",
-        "iconPath": "/image/icon_2.png",
-        "selectedIconPath": "/image/icon_22.png"
+        "pagePath": "pages/for-you/for-you",
+        "text": "为你推荐",
+        "iconPath": "image/tabbar/2.png",
+        "selectedIconPath": "image/tabbar/2-hl.png"
+      },
+      {
+        "pagePath": "pages/explore/explore",
+        "text": "浏览",
+        "iconPath": "image/tabbar/3.png",
+        "selectedIconPath": "image/tabbar/3-hl.png"
+      },
+      {
+        "pagePath": "pages/broadcast/broadcast",
+        "text": "广播",
+        "iconPath": "image/tabbar/4.png",
+        "selectedIconPath": "image/tabbar/4-hl.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "image/tabbar/5.png",
+        "selectedIconPath": "image/tabbar/5-hl.png"
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "debug":true,
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": [
+    "audios"
+  ]
 }

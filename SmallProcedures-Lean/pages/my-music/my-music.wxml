@@ -1,0 +1,26 @@
+<view class="container">
+  <!-- 最近添加 -->
+  <text class="music-category-text">最近添加</text>
+  <view class="big-photo-list">
+    <view class="big-photo-item" wx:for='{{songList}}' wx:key="{{index}}">
+        <image class="photo" src="{{item.coverImgUrl}}"></image>
+        <text class="music-name">{{item.name}}</text>
+        <text class="music-author">{{item.singer}}</text>
+    </view>
+  </view>
+  <!-- 播放列表 -->
+  <view class="music-group-selector">
+    <text class="music-group-selector-text" bindtap="actionSheetTap">{{musicGroupName}}</text>
+    <image class="music-group-selector-arr" src="/image/icon-jiantou.png"></image>
+  </view>
+  <!-- 播放列表 -->
+  <view>
+
+  </view>
+</view>
+
+<action-sheet hidden="{{actionSheetHiden}}">
+<block wx:for="{{actionSheeItems}}" wx:key="{{index}}">
+    <action-sheet-item>{{item}}</action-sheet-item>
+</block>
+</action-sheet>

@@ -1,0 +1,10 @@
+<view class='container'>
+  <image class='bgaudio' src='{{!changedImg?"http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000":"/image/timg.gif"}}'></image>
+  <view class='control-view'>
+    <image src='/image/front10.png'  bindtap='onPositionTap' data-how='0'></image>
+    <image src='/image/{{isPlaying?"pause":"play"}}.png' bindtap='onAudioTap'></image>
+    <image src='/image/stop.png' bindtap='onStopTap'></image>
+    <image src='/image/next10.png' bindtap='onPositionTap' data-how='1'></image>
+  </view>
+
+</view>

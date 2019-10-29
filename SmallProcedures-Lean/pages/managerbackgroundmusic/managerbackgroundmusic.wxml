@@ -1,0 +1,4 @@
+<button type="primary" bindtap="play">播放</button>
+<button type="primary" bindtap="pause">暂停</button>
+<button type="primary" bindtap="stop">停止</button>
+<button type="primary" bindtap="seek">跳转</button>
