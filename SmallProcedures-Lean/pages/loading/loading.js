@@ -1,4 +1,4 @@
-// pages/appmusic/appmusic.js
+// pages/loading/loading.js
 Page({
 
   /**
@@ -7,7 +7,24 @@ Page({
   data: {
 
   },
-
+  showToast(){
+    wx.showToast({
+      title: '加载中',
+      icon:'loading',
+      duration:2000,
+      mask:true
+    })
+    // wx.hideToast();关闭
+  },
+  /**
+   * 
+   */
+  showLoading(){
+      wx.showLoading({
+        title: '加载中'
+      })
+      // wx.hideLoading();关闭
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,0 +1,6 @@
+<button bindtap="chooseimage">上传图片</button>
+<button bindtap="getImageInfo">获取图片信息</button>
+<button bindtap="previewImage">预览图片</button>
+<image class="img" bindtap="previewImage" src="{{upateImage}}"></image>
+<image src="{{serviceImage}}"></image>
+<button bindtap="downLoadService">网络图片的保存操作</button>

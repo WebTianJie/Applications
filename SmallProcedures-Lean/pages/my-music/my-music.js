@@ -52,7 +52,14 @@ Page({
     songList:[],
     musicGroupName:_items[0],
     actionSheetHiden:true,
-    actionSheeItems:_items
+    actionSheeItems:_items,
+    listTempName:'music-play-list',
+    tempData:[],
+    playing:false,
+    playBar:{
+      coverImgUrl:'http://img.5nd.com/86/photo/2018album/20185/85111.jpg',
+      name:'哑巴'
+    }
   },
   /**
    * 列表选择
@@ -60,6 +67,89 @@ Page({
   actionSheetTap(){
     this.setData({
       actionSheetHiden: !this.data.actionSheetHiden
+    })
+  },
+  /***
+   * actionssheetchane
+   */
+  actionSheetChange(){
+    this.setData({
+      actionSheetHiden: !this.data.actionSheetHiden
+    })
+  },
+  /***
+   * item单击
+   */
+  bindItemTap(e){
+    //单机连接操作
+    //获知现在的所点击的菜单
+    let _listTempLateName='';
+    let tempData='';
+    let sheetitem=e.currentTarget.dataset.sheetitem;
+    //判断打开模板页面
+    switch (sheetitem){
+        case '播放列表' :
+         _listTempLateName='music-play-list';
+         break;
+      case '歌曲':
+        _listTempLateName = 'songs-list';
+        tempData=_songsList;
+        break;
+      case '专辑':
+        _listTempLateName = 'album-list';
+        tempData=_albumList;
+        break;
+      case '演唱者':
+        _listTempLateName = 'author-list';
+        tempData=_albumList;
+        break;
+    }
+    console.log(this.data.actionSheetHiden);
+    //单机显示隐藏
+    this.setData({
+      actionSheetHiden: !this.data.actionSheetHiden,
+      listTempName:_listTempLateName,
+      tempData:tempData
+    })
+  },
+  /***
+   * 点击唱片
+   */
+  play(e){
+    let that=this;
+    let num=e.currentTarget.dataset.num;
+    let res=this.data.songList[num];
+    this.setData({
+      //改变播放轴
+      playBar:res,
+      playing:true,
+      playingSongNum:num
+    })
+    //播放歌曲
+    wx.playBackgroundAudio({
+      dataUrl: res.dataUrl,
+      name:res.name,
+      singer:res.singer,
+      coverImgUrl:res.coverImgUrl,
+      complete(r){
+        console.log(e);
+        that.setData({
+          palying:true
+        })
+      }
+    })
+  },
+  /**
+   * 暂停歌曲
+   */
+  pause(e){
+    let that=this;
+    wx.pauseBackgroundAudio({
+      success(){
+        that.setData({
+          playing:false
+        })
+      }
     })
   },
   /**

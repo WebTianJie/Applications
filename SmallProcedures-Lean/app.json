@@ -1,7 +1,9 @@
 {
   "pages": [
+    "pages/file/file",
+    "pages/loading/loading",
+    "pages/wximage/wximage",
     "pages/my-music/my-music",
-    "pages/appmusic/appmusic",
     "pages/loadFont/index",
     "pages/baidumusic/baidumusic",
     "pages/managerbackgroundmusic/managerbackgroundmusic",
@@ -94,7 +96,6 @@
       }
     ]
   },
-  "debug":true,
   "sitemapLocation": "sitemap.json",
   "requiredBackgroundModes": [
     "audios"

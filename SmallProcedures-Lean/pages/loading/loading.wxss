@@ -1,0 +1,11 @@
+.container{
+  background: grey;
+  width:100%;
+}
+.page-section{
+  margin-top: 10rpx;
+  width:90%;
+  padding:10rpx;
+  background: white;
+  border-radius: 18rpx;
+}
