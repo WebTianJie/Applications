@@ -1,0 +1,14 @@
+.container{
+   background: grey;
+}
+page{
+  width:100%;
+  height:100%;
+}
+.btn-arr{
+  width:80%;
+  background: white;
+}
+.section{
+  background: white;
+}

@@ -1,0 +1,9 @@
+<!-- key 每一个key不能超过1m -->
+<button class="" bindtap="setStorage">设置缓存</button>
+<button class="" bindtap="removeStorage">移除缓存</button>
+<button class="" bindtap="getStorage">获取缓存</button>
+<button class="" bindtap="clearStorage">清楚缓存数据</button>
+{{cacheparam}}
+{{urlparam}}
+{{apiparam}}
+{{globalApi}}

@@ -1,5 +1,10 @@
 {
   "pages": [
+    "pages/wifidemo/index",
+    "pages/compassdemo/index",
+    "pages/compass/compass",
+    "pages/pagejumpparam/pagejumpparam",
+    "pages/cache/cache",
     "pages/file/file",
     "pages/loading/loading",
     "pages/wximage/wximage",
@@ -51,7 +56,8 @@
     "pages/search/search",
     "pages/for-you/for-you",
     "pages/explore/explore",
-    "pages/broadcast/broadcast"
+    "pages/broadcast/broadcast",
+    "pages/cachedemo/cachedemo"
   ],
   "window": {
     "backgroundTextStyle": "dark",

@@ -1,0 +1,6 @@
+<view class="container0">
+    <button bindtap="store">缓存带参跳转</button>
+    <navigator url="/pages/cache/cache?param=urlcode001">navigtor带参数跳转</navigator>
+    <button bindtap="apiUrl">微信api跳转页面传值</button>
+    <button bindtap="globalApi">全局变量页面传值</button>
+</view>

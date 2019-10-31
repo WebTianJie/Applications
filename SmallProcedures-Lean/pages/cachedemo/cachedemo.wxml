@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="btn-arr">
+    <navigator url="/pages/cache/cache">跳转到新的页面</navigator>
+    <view class="section">
+      <input bindblur="blur" placeholder="输入信息"></input>
+      <button bindtap="navi">存储</button>
+    </view>
+  </view>
+</view>
