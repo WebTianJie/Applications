@@ -1,0 +1,7 @@
+<view class="container">
+  <text>{{text}}</text>
+</view>
+<button bindtap="copy">一键复制</button>
+<button bindtap="showcopy">显示赋值</button>
+{{copytext}}
+

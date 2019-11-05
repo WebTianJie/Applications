@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="section">
+    <button bindtap="sanCode2">允许从相机相册扫码</button>
+    <button bindtap="sanCode1">只允许从相机扫码</button>
+  </view>
+</view>
+<image src="{{src}}"></image>

@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/scanning/scanning",
+    "pages/copy/copy",
+    "pages/shake/index",
     "pages/wifidemo/index",
     "pages/compassdemo/index",
     "pages/compass/compass",
