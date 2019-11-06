@@ -1,0 +1,24 @@
+<view wx:for="{{commetnList}}" wx:key="{{index}}">
+  <movable-area class="movable-area">
+    <movable-view class="movable-view" direction="horizontal">
+      <view class="touch-item {{item.isTouchMove?'touch-move-active':''}}" data-id='{{item.id}}' catchtap="showDetail" data-index="{{index}}" bindtouchstart="touchStart" bindtouchmove="touchMove">
+        <view class="item-left">
+          <view class="item">{{item.comment_con}}</view>
+          <view class="info">
+            <view class="user">评论者: {{item.comment_user}}</view>
+            <view class="time">时间: {{item.ctime}}</view>
+          </view>
+        </view>
+        <view class="approval" catchtap="approval" data-id='{{item.id}}'>通过</view>
+      </view>
+    </movable-view>
+  </movable-area>
+</view>
+<view class="comment-content" hidden="{{hiddenModel}}" data-tartget="{{true}}"  bindtap="hideModel">
+    <view class="con" data-tartget="{{false}}" catchtap="hideModel">
+    <view class="con-title">{{contitle}}</view>
+    <view class="con-con">
+      {{commetCon}}
+    </view>
+  </view>
+</view>

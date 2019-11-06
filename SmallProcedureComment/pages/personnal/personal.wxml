@@ -1,0 +1,49 @@
+<form reportSubmit bindsubmit="submitFormId">
+  <view class="header">
+    <view class="user" hoverClass="none">
+      <view class="user_box">
+        <view catchtap="previewImage" class="logo">
+          <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <block wx:if="{{vip}}">
+          <view class="user_info">
+            <view class="user_name">
+              <text>{{userInfo.nickName}}</text>
+            </view>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="user_info">
+            <view class="user_name">
+              <text>{{userInfo.nickName}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <image src='https://edu.qinhui88.com/assets/wx/image/wave.gif' mode='scaleToFill' class='gif-wave'></image>
+  </view>
+  <!-- 功能列表 -->
+  <view class="nav">
+    <view bindtap="openPage" class="item">
+      <view class='wallet'>
+        <text class='icon-news icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <navigator url="/pages/articlelist/articlelist"> <text>文章列表</text></navigator>
+      </view>
+      <view class="icon">
+        <text class='icon-right'></text>
+      </view>
+    </view>
+    <button class="item" >
+      <view class='wallet'>
+        <text class='icon-settings icon'></text>
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+        <text>设置中心</text>
+      </view>
+      <view class="icon">
+        <text class='icon-right'></text>
+      </view>
+    </button>
+  </view>
+</form>

@@ -1,0 +1,8 @@
+<view class="container">
+   <view class="title">{{title}}</view>
+   <view class="area">
+      <textarea class="inputArea" maxlength="200" bindinput="inputChange" placeholder="留言后,最所有人可见"></textarea>
+      <view class="count"><view class="counttext {{count==200 ? 'red' : ''}}">{{count}}</view>/200</view>
+       <button bindtap="btnGuest">留言</button>
+   </view>
+</view>

@@ -1,0 +1,13 @@
+<view wx:for="{{articleList}}" wx:key="{{index}}">
+  <movable-area class="movable-area">
+    <movable-view class="movable-view" direction="horizontal">
+      <view class="touch-item {{item.isTouchMove?'touch-move-active':''}}" data-index="{{index}}"
+       bindtouchstart="touchStart" bindtouchmove="touchMove">
+          <view class="content" >{{item.article_title}}</view>
+          <view class="content ctime">{{item.ctime}}</view>
+          <view class="del" catchtap="del" data-index='{{index}}' data-title="{{item.article_title}}" >删除</view>
+          <view class="del lookup" catchtap="lookup" data-index='{{index}}' data-more="{{item.article_title}}" >查看</view>
+      </view>
+    </movable-view>  
+  </movable-area>
+</view>

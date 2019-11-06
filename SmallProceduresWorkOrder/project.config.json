@@ -4,26 +4,17 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"coverView": true,
-		"autoAudits": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		}
+		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.9.0",
+	"libVersion": "2.7.7",
 	"appid": "wx51441ba03f4b09f2",
-	"projectname": "SmallProcedureComment",
+	"projectname": "miniprogram-submitWorkOrder",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -47,13 +38,16 @@
 			"currentL": -1,
 			"list": []
 		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/workOrder/workOrder",
+					"pathName": "pages/workOrder/workOrder",
+					"scene": null
+				}
+			]
 		}
 	}
 }
