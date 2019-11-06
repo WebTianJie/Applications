@@ -1,0 +1,13 @@
+.container{
+  background: #ccc;
+}
+.page-section{
+  background: #fff;
+  width:90%;
+  padding:10rpx 0;
+  margin:20rpx auto;
+  text-align: center;
+}
+.title{
+  font-weight:bold;
+}

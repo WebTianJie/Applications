@@ -1,5 +1,9 @@
 {
   "pages": [
+    "pages/shockandscreenshots/shockandscreenshots",
+    "pages/usertinfoandnavgitor/usertinfoandnavgitor",
+    "pages/induction/induction",
+    "pages/electricandphone/electricandphone",
     "pages/scanning/scanning",
     "pages/copy/copy",
     "pages/shake/index",

@@ -1,0 +1,21 @@
+
+<view class="contaienr">
+  <view class="page-section">
+    <view>设置导航条</view>
+    {{showcon}}
+    <button bindtap="setNavigateBarTitile">设置导航条</button>
+  </view>
+   <view class="page-section">
+    <view>用户操作</view>
+    <button bindtap="showtoast">用户消息提示</button>
+    <button bindtap="showmodule">模态对话框</button>
+  </view>
+   <view class="page-section">
+    <view>loading提示框</view>
+    <button bindtap="showloading">展示加载层</button>
+  </view>
+    <view class="page-section">
+    <view>操作菜单提示框</view>
+    <button bindtap="showactionsheet">弹出菜单</button>
+  </view>
+</view>
