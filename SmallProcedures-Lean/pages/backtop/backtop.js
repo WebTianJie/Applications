@@ -1,14 +1,24 @@
-// pages/shockandscreenshots/shockandscreenshots.js
+// pages/backtop/backtop.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    con:'用户没有截屏'
+    ishide:false
   },
-  screenhots(){
-
+  /**回到顶部 */
+  goTop(e){
+    if(wx.pageScrollTo){
+      wx.pageScrollTo({
+        scrollTop: 0,
+      })
+    }else{
+      wx.showModal({
+        title: '提示',
+        content: '当前微信版本过低,暂无法使用此功能',
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载
@@ -28,50 +38,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let that=this;
-    wx.onUserCaptureScreen(function (res) {
-      that.setData({
-        con: '用户截屏了'
-      })
-    })
+
   },
-  /**
-   * 设备长时间振动
-   */
-  longShock(){
-   wx.vibrateLong({
-     success(){
-       console.log('长时间震动');
-     }
-   })
-  },
-  /***
-   * 设备短时间震动
-   */
-  shortShock(){
-    wx.vibrateShort({
-      success(){
-        console.log('短时间震动');
-      }
-    })
-  },
-  /***
-   * 添加手机来向你人
-   */
-  addContractor(){
-    wx.addPhoneContact({
-      firstName: '张三',
-      nickname:'zs',
-      remark:'程序员',
-      mobilePhoneNumber:'17788165326',
-      email:'4464664@qq.com'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-   
+
   },
 
   /**
@@ -93,6 +67,24 @@ Page({
    */
   onReachBottom: function () {
 
+  },
+  /***
+   * 页面滚动操作
+   */
+  onPageScroll(e){
+    let srollTop=e.scrollTop;
+    if (srollTop>100){
+        this.setData({
+          ishide:true
+        })
+    }
+    else{
+      if (srollTop < 60) {
+        this.setData({
+          ishide: false
+        })
+      }
+    }
   },
 
   /**

@@ -1,22 +1,42 @@
-// pages/shockandscreenshots/shockandscreenshots.js
+// pages/scrollview/scrollview.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    con:'用户没有截屏'
+    top:0,
+    ishide:true
   },
-  screenhots(){
 
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
   },
-
+  /***
+   * toTop滚动到顶部
+   */
+  toTop(e){
+    console.log(e.detail.scrollTop);
+    let  top=e.detail.scrollTop;
+    if(top>600){
+      this.setData({
+        ishide:false
+      })
+    }else{
+      this.setData({
+        ishide: true
+      })
+    }
+  },
+  //返回顶部
+  goTop(e){//回到顶部
+      this.setData({
+        top:0
+      })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -28,50 +48,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let that=this;
-    wx.onUserCaptureScreen(function (res) {
-      that.setData({
-        con: '用户截屏了'
-      })
-    })
+
   },
-  /**
-   * 设备长时间振动
-   */
-  longShock(){
-   wx.vibrateLong({
-     success(){
-       console.log('长时间震动');
-     }
-   })
-  },
-  /***
-   * 设备短时间震动
-   */
-  shortShock(){
-    wx.vibrateShort({
-      success(){
-        console.log('短时间震动');
-      }
-    })
-  },
-  /***
-   * 添加手机来向你人
-   */
-  addContractor(){
-    wx.addPhoneContact({
-      firstName: '张三',
-      nickname:'zs',
-      remark:'程序员',
-      mobilePhoneNumber:'17788165326',
-      email:'4464664@qq.com'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-   
+
   },
 
   /**

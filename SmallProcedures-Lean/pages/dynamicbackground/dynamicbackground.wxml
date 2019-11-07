@@ -1,0 +1,4 @@
+<view class="container">
+  <button bindtap="setBackgroundColor">设置背景颜色</button>
+  <button bindtap="">设置背景样式</button>
+</view>

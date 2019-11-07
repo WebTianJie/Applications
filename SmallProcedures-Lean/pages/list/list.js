@@ -1,20 +1,40 @@
-// pages/shockandscreenshots/shockandscreenshots.js
+// pages/list/list.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    con:'用户没有截屏'
-  },
-  screenhots(){
 
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let index = parseInt(options.index);
+   console.log(index);
+   let  barText='';
+   switch(index){
+     case 0:
+       barText ='休闲食品';
+     break;
+     case 1:
+       barText = '生活百家';
+       break;
+     case 2:
+       barText = '饮料食品';
+       break;
+     case 3:
+       barText = '生鲜';
+       break;
+     case 4:
+       barText = '外卖';
+       break;
+   }
+   wx.setNavigationBarTitle({
+     title:barText
+   })
   },
 
   /**
@@ -28,50 +48,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let that=this;
-    wx.onUserCaptureScreen(function (res) {
-      that.setData({
-        con: '用户截屏了'
-      })
-    })
+
   },
-  /**
-   * 设备长时间振动
-   */
-  longShock(){
-   wx.vibrateLong({
-     success(){
-       console.log('长时间震动');
-     }
-   })
-  },
-  /***
-   * 设备短时间震动
-   */
-  shortShock(){
-    wx.vibrateShort({
-      success(){
-        console.log('短时间震动');
-      }
-    })
-  },
-  /***
-   * 添加手机来向你人
-   */
-  addContractor(){
-    wx.addPhoneContact({
-      firstName: '张三',
-      nickname:'zs',
-      remark:'程序员',
-      mobilePhoneNumber:'17788165326',
-      email:'4464664@qq.com'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-   
+
   },
 
   /**

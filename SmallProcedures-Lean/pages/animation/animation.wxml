@@ -1,0 +1,5 @@
+
+<view class="view" animation="{{animate}}">
+
+</view>
+<button  bindtap="move" type="primary">开始移动</button>

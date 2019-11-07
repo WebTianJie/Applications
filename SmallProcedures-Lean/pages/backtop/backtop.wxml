@@ -1,0 +1,8 @@
+
+<view class="page">
+ <text>top</text>
+</view>
+
+<view class="gotop" hidden="{{!ishide}}">
+  <view catchtap="goTop">回到顶部</view>
+</view>

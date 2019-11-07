@@ -1,14 +1,27 @@
-// pages/shockandscreenshots/shockandscreenshots.js
+// pages/animation/animation.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    con:'用户没有截屏'
+    animate:''
   },
-  screenhots(){
-
+  /***
+   * 移动
+   */
+  move(){
+    //声明动画对象
+    let anmiObj=wx.createAnimation({
+      duration:400,
+      timingFunction:'ease',
+      delay:0
+    })
+    //设置动画效果
+    anmiObj.translateX(200).backgroundColor('#00ff00').width(200).opacity(0.19).step();
+    this.setData({
+      animate:anmiObj.export()
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -28,50 +41,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let that=this;
-    wx.onUserCaptureScreen(function (res) {
-      that.setData({
-        con: '用户截屏了'
-      })
-    })
+
   },
-  /**
-   * 设备长时间振动
-   */
-  longShock(){
-   wx.vibrateLong({
-     success(){
-       console.log('长时间震动');
-     }
-   })
-  },
-  /***
-   * 设备短时间震动
-   */
-  shortShock(){
-    wx.vibrateShort({
-      success(){
-        console.log('短时间震动');
-      }
-    })
-  },
-  /***
-   * 添加手机来向你人
-   */
-  addContractor(){
-    wx.addPhoneContact({
-      firstName: '张三',
-      nickname:'zs',
-      remark:'程序员',
-      mobilePhoneNumber:'17788165326',
-      email:'4464664@qq.com'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-   
+
   },
 
   /**

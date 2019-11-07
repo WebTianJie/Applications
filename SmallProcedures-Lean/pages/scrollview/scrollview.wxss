@@ -1,0 +1,32 @@
+.scroll-view{
+  height:1000rpx;
+  background: green;
+  font-size:80rpx;
+
+}
+.page{
+  height:1600rpx;
+  background: red;
+}
+text{
+  font-size:80rpx;
+}
+.gotop{
+  position: fixed;
+  right: 30rpx;
+  bottom:50rpx;
+  height:60rpx;
+  width:100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#222;
+  font-weight: bold;
+  font-size: 21rpx;
+  background-color: wheat;
+}
+.scroll-view1,.scroll-view2{
+  height: 1800rpx;
+}
+.scroll-view1{background: green;}
+.scroll-view2{background: red;}

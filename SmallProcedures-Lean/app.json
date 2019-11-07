@@ -1,5 +1,10 @@
 {
   "pages": [
+    "pages/animation/animation",
+    "pages/backtop/backtop",
+    "pages/dynamicbackground/dynamicbackground",
+    "pages/modifynavigation/modifynavigation",
+    "pages/dynamicnavigation/dynamicnavigation",
     "pages/shockandscreenshots/shockandscreenshots",
     "pages/usertinfoandnavgitor/usertinfoandnavgitor",
     "pages/induction/induction",
@@ -64,7 +69,9 @@
     "pages/for-you/for-you",
     "pages/explore/explore",
     "pages/broadcast/broadcast",
-    "pages/cachedemo/cachedemo"
+    "pages/cachedemo/cachedemo",
+    "pages/list/list",
+    "pages/scrollview/scrollview"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -75,42 +82,56 @@
     "backgroundColor": "#ddd"
   },
   "tabBar": {
-    "selectedColor": "#ff0000",
+    "selectedColor": "green",
     "list": [
       {
-        "pagePath": "pages/my-music/my-music",
-        "text": "我的音乐",
-        "iconPath": "image/tabbar/1.png",
-        "selectedIconPath": "image/tabbar/1-hl.png"
+        "pagePath": "pages/modifynavigation/modifynavigation",
+        "text": "首页",
+        "iconPath": "image/icon_1.png",
+        "selectedIconPath": "image/icon_11.png"
       },
       {
-        "pagePath": "pages/for-you/for-you",
-        "text": "为你推荐",
-        "iconPath": "image/tabbar/2.png",
-        "selectedIconPath": "image/tabbar/2-hl.png"
-      },
-      {
-        "pagePath": "pages/explore/explore",
-        "text": "浏览",
-        "iconPath": "image/tabbar/3.png",
-        "selectedIconPath": "image/tabbar/3-hl.png"
-      },
-      {
-        "pagePath": "pages/broadcast/broadcast",
-        "text": "广播",
-        "iconPath": "image/tabbar/4.png",
-        "selectedIconPath": "image/tabbar/4-hl.png"
-      },
-      {
-        "pagePath": "pages/search/search",
-        "text": "搜索",
-        "iconPath": "image/tabbar/5.png",
-        "selectedIconPath": "image/tabbar/5-hl.png"
+        "pagePath": "pages/modifynavigation/modifynavigation",
+        "text": "关于我们",
+        "iconPath": "image/icon_2.png",
+        "selectedIconPath": "image/icon_22.png"
       }
     ]
   },
   "sitemapLocation": "sitemap.json",
   "requiredBackgroundModes": [
     "audios"
+  ],
+  "list1": [
+    {
+      "pagePath": "pages/my-music/my-music",
+      "text": "我的音乐",
+      "iconPath": "image/tabbar/1.png",
+      "selectedIconPath": "image/tabbar/1-hl.png"
+    },
+    {
+      "pagePath": "pages/for-you/for-you",
+      "text": "为你推荐",
+      "iconPath": "image/tabbar/2.png",
+      "selectedIconPath": "image/tabbar/2-hl.png"
+    },
+    {
+      "pagePath": "pages/explore/explore",
+      "text": "浏览",
+      "iconPath": "image/tabbar/3.png",
+      "selectedIconPath": "image/tabbar/3-hl.png"
+    },
+    {
+      "pagePath": "pages/broadcast/broadcast",
+      "text": "广播",
+      "iconPath": "image/tabbar/4.png",
+      "selectedIconPath": "image/tabbar/4-hl.png"
+    },
+    {
+      "pagePath": "pages/search/search",
+      "text": "搜索",
+      "iconPath": "image/tabbar/5.png",
+      "selectedIconPath": "image/tabbar/5-hl.png"
+    }
   ]
 }

@@ -1,14 +1,25 @@
-// pages/shockandscreenshots/shockandscreenshots.js
+// pages/dynamicnavigation/dynamicnavigation.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    con:'用户没有截屏'
-  },
-  screenhots(){
 
+  },
+  /***
+   * 置顶帖文本设定
+   */
+  setTopBar(){
+    wx.setTopBarText({
+      text: '小程序置顶显示',
+      success(res){
+          console.log(res);
+      },
+      fail(err){
+        console.log(err);
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -28,50 +39,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let that=this;
-    wx.onUserCaptureScreen(function (res) {
-      that.setData({
-        con: '用户截屏了'
-      })
-    })
+
   },
-  /**
-   * 设备长时间振动
-   */
-  longShock(){
-   wx.vibrateLong({
-     success(){
-       console.log('长时间震动');
-     }
-   })
-  },
-  /***
-   * 设备短时间震动
-   */
-  shortShock(){
-    wx.vibrateShort({
-      success(){
-        console.log('短时间震动');
-      }
-    })
-  },
-  /***
-   * 添加手机来向你人
-   */
-  addContractor(){
-    wx.addPhoneContact({
-      firstName: '张三',
-      nickname:'zs',
-      remark:'程序员',
-      mobilePhoneNumber:'17788165326',
-      email:'4464664@qq.com'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-   
+
   },
 
   /**

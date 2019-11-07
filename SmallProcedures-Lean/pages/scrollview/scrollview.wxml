@@ -1,0 +1,9 @@
+<scroll-view  scroll-y style="height:1400rpx" scrollTop="{{top}}"
+ bindscroll="toTop">
+  <view class="scroll-view1">top1</view>
+  <view class="scroll-view2">top2</view>
+  <view class="gotop" hidden="{{ishide}}"></view>
+   <view class="gotop" hidden="{{ishide}}" catchtap="goTop">
+      <view>回到顶部</view>
+   </view>
+</scroll-view>

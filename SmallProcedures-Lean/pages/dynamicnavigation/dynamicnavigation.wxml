@@ -1,0 +1,14 @@
+<view class="container">
+    <view class="page-section">
+    <button bindtap="setTopBar">置顶帖文本设定</button>
+    </view>
+    <view class="page-section">
+    <view class="link">
+      <navigator url="/pages/list/list?index=0">休闲食品</navigator>
+      <navigator url="/pages/list/list?index=1">生活百家</navigator>
+      <navigator url="/pages/list/list?index=2">饮料食品</navigator>
+      <navigator url="/pages/list/list?index=3">生鲜</navigator>
+      <navigator url="/pages/list/list?index=4">外卖</navigator>
+    </view>
+    </view>
+</view>
