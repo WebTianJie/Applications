@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/myselreflesh/myselreflesh",
+    "pages/dualmoderefresh/dualmoderefresh",
+    "pages/animtiondemo/anmitiondemo",
     "pages/animation/animation",
     "pages/backtop/backtop",
     "pages/dynamicbackground/dynamicbackground",

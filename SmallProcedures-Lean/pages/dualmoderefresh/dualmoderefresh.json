@@ -1,0 +1,5 @@
+{
+  "navigationBarTitleText": "双模式刷新",
+  "enablePullDownRefresh": true,
+  "usingComponents": {}
+}

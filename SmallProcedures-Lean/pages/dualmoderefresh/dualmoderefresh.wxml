@@ -1,0 +1,6 @@
+<view class="page">
+  <view class="page-section">
+    <image src="{{imgsrc}}"></image>
+    <view class="imgtitle">{{imgtitle}}</view>
+  </view>
+</view>
