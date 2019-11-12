@@ -9,7 +9,9 @@ Page({
       commetnList:[],
       commetCon:'',
       hiddenModel:true,
-      contitle:''
+      contitle:'',
+      conid:'',
+      nomsg: true
   },
   /***
    * 审批通过
@@ -32,7 +34,8 @@ Page({
     this.setData({
       commetCon:commentObj.comment_con,
       hiddenModel:false,
-      contitle:commentObj.comment_user
+      contitle:commentObj.comment_user,
+      conid:commentObj.id
     })
   },
   /***
@@ -147,6 +150,11 @@ Page({
       url: app.globalData.serverPath + 'getAllApprovalCommentsByTitle?title=' + title,
       success(res) {
         let items = res.data.data;
+        if(res.data.data.length==0){
+          that.setData({
+            nomsg: false
+          })
+        }
         for (let i = 0; i < items.length; i++) {
           items[i].isTouchMove = false;
           items[i].ctime = that.timeFormate(items[i].ctime);
@@ -170,6 +178,9 @@ Page({
         success(res){
            wx.showToast({
              title: '审核通过',
+           })
+           that.setData({
+             hiddenModel:true
            })
           that.getAllApprovalCommentsByTitle(app.globalData.title);
         }

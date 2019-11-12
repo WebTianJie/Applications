@@ -1,0 +1,7 @@
+<view>this  a worker demo</view>
+<form bindsubmit="touch">
+ <input  name="num1" placeholder="num1"></input>
+  <input  name="num2" placeholder="num2"></input>
+  <button type="primary" form-type="submit" >触发主线程</button>
+</form> 
+<input placeholder="result" value="{{result}}"></input>

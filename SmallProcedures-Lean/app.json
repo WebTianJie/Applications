@@ -1,5 +1,11 @@
 {
   "pages": [
+    "pages/selectQuery/selectQuery",
+    "pages/workerandwxml/workerandwxml",
+    "pages/sportsandshare/sportsandshare",
+    "pages/location/location",
+    "pages/systemandaddress/systemandaddress",
+    "pages/payandad/payandad",
     "pages/appletjump/appletjump",
     "pages/loginstate/loginstate",
     "pages/menuwinformkeyboard/menuwinformkeyboard",
@@ -108,9 +114,15 @@
   "requiredBackgroundModes": [
     "audios"
   ],
-  "navigateToMiniProgramAppIdList":[
+  "navigateToMiniProgramAppIdList": [
     "wx51441ba03f4b09f2"
   ],
+  "workers": "workers",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取位置信息将用户小程序"
+    }
+  },
   "list1": [
     {
       "pagePath": "pages/my-music/my-music",

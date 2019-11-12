@@ -1,6 +1,6 @@
 //app.js
 App({
-  onLaunch: function (e) {
+  onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -29,18 +29,11 @@ App({
               }
             }
           })
-          
         }
       }
     })
-  
-  },
-  userInfoReadyCallback(res){
-    this.globalData.userInfo = res.userInfo
   },
   globalData: {
-    userInfo: null,
-    serverPath:'http://192.168.9.188:12306/',
-    title:'文章标题'
+    userInfo: null
   }
 })

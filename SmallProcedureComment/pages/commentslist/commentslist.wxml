@@ -14,11 +14,13 @@
     </movable-view>
   </movable-area>
 </view>
+<view class="nomsg" hidden="{{nomsg}}">本篇文章没有待审核的评论</view>
 <view class="comment-content" hidden="{{hiddenModel}}" data-tartget="{{true}}"  bindtap="hideModel">
     <view class="con" data-tartget="{{false}}" catchtap="hideModel">
     <view class="con-title">{{contitle}}</view>
     <view class="con-con">
       {{commetCon}}
     </view>
+    <button type="primary" catchtap="approval" data-id="{{conid}}">通过</button>
   </view>
 </view>

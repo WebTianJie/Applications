@@ -1,0 +1,5 @@
+<view class="container">
+  <button type="primary" bindtap="sport">微信运动</button>
+  <button type="primary">系统转发右上角</button>
+  <button open-type="share"  type="primary">手动转发</button>
+</view>

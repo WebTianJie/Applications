@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+   <button type="primary" bindtap="address">收货地址</button>
+   <button type="primary" bindtap="userAuth">查看收授权</button>
+   <button type="primary" bindtap="setSys">系统设置</button>
+   <view>
+      <view hidden="{{shows}}">
+        <view>您的设置为</view>
+        <block wx:for="{{opList}}">
+          <view>{{item.name}}:{{item.value}}</view>
+        </block>
+      </view>
+   </view>
+  </view>
+</view>

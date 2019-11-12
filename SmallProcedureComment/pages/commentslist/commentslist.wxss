@@ -87,6 +87,7 @@
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
+  word-break: break-all;
 }
 
 .con-title {
@@ -96,4 +97,9 @@
 .con-con {
   padding: 15rpx;
   text-indent: 2em;
+}
+.nomsg{
+  width:100%;
+  text-align: center;
+  padding-top: 50rpx;
 }

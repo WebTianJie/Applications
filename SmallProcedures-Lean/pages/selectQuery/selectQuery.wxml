@@ -1,0 +1,2 @@
+<text id="myid">pages/selectQuery/selectQuery.wxml</text>
+<button type="primary" bindtap="query">查询</button>

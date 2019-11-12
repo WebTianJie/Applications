@@ -1,0 +1,8 @@
+
+<view class="container">
+  <text>获取地理位置</text>
+  <button type="primary" bindtap="getLocation">获取地理位置</button>
+  <button type="primary" bindtap="getInvoiceTtitle">获取发票抬头</button>
+  <view>发票银行:{{bankName}}</view>
+  <button type="primary" bindtap="getInvoice">获取发票信息</button>
+</view>
