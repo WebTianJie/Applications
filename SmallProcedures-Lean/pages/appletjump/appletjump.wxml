@@ -1,0 +1,6 @@
+<button bindtap="jump">跳转到其它小程序</button>
+<view>数据上报</view>
+<button type="primary" bindtap="dataUplaod">数据上报</button>
+<view>数据分析</view>
+<button type="primary" id="sum" bindtap="dataAnalise">数据分析</button>
+

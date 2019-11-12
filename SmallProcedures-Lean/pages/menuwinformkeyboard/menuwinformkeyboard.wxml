@@ -1,0 +1,16 @@
+
+<view class="contianer">
+  <view class="page-section">
+    <text>右上角分享按钮</text>
+    <button bindtap="share">右上角分享按钮</button>
+  </view>
+   <view class="page-section">
+    <text>屏幕大小改变</text>
+    <input placeholder="input" ></input>
+    <button>在onshow事件里面触发</button>
+  </view>
+   <view class="page-section">
+    <text>键盘改变事件</text>
+    <button>在onshow事件里面触发</button>
+  </view>
+</view>

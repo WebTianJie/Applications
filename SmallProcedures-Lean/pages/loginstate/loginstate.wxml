@@ -1,0 +1,4 @@
+<button type="primary" bindtap="login">登录</button>
+<button type="primary" bindtap="getComInfo">获取公司信息</button>
+<button type="primary" bindtap="getAccountInfo">获取当前帐户</button>
+<button type="primary" bindtap="getUserInfo">获取用户信息</button>

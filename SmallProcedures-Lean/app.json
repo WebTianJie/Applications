@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/appletjump/appletjump",
+    "pages/loginstate/loginstate",
+    "pages/menuwinformkeyboard/menuwinformkeyboard",
     "pages/myselreflesh/myselreflesh",
     "pages/dualmoderefresh/dualmoderefresh",
     "pages/animtiondemo/anmitiondemo",
@@ -104,6 +107,9 @@
   "sitemapLocation": "sitemap.json",
   "requiredBackgroundModes": [
     "audios"
+  ],
+  "navigateToMiniProgramAppIdList":[
+    "wx51441ba03f4b09f2"
   ],
   "list1": [
     {
