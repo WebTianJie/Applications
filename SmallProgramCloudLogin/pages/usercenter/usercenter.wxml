@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="page-area">
+    <image src="http://image2.sina.com.cn/ent/d/2005-06-21/U105P28T3D758541F326DT20050621155848.jpg" class="logo"></image>
+    <view class="page-section">
+      <text class="name">{{name}}</text>
+      <view>欢迎来到个人中心</view>
+    </view>
+  </view>
+</view>
