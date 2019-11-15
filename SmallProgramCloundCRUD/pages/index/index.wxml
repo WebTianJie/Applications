@@ -1,0 +1,58 @@
+<view class="container">
+   <view class="page-body">
+    <view class="page-section">
+        <view class="page-section-title">数据库录入操作</view>
+        <view class="page-section-content">
+        <!-- <view class="section-row">
+          <text>姓名</text>
+          <input name="username" class="inputs"></input>
+        </view>
+         <view class="section-row">
+          <text>年龄</text>
+          <input name="userage" class="inputs"></input>
+        </view> -->
+        <button type="primary" bindtap="insert" >数据库录入</button>
+        </view>
+    </view>
+    <view class="page-section">
+        <view class="page-section-title">查询一条数据</view>
+        <button type="primary" bindtap="selectSingle" >查询单条数据</button>
+        </view>
+    </view>
+    <view class="page-section">
+        <view class="page-section-title">查询多条数据</view>
+        <button type="primary" bindtap="selectMore" >查询多条数据</button>
+    </view>
+     <view class="page-section">
+        <view class="page-section-title">单条数据查询条件为对象</view>
+        <button type="primary" bindtap="selectWhereObJ" >单条数据查询条件为对象</button>
+    </view>
+     <view class="page-section">
+        <view class="page-section-title">云函数简单调用</view>
+        <button type="primary" bindtap="cloudFunSum" >求和</button>
+    </view>
+      <view class="page-section">
+        <view class="page-section-title">云函数指令操作</view>
+        <button type="primary" bindtap="getStudentByAge" >获取大于等于19岁学生</button>
+    </view>
+     <view class="page-section">
+        <view class="page-section-title">更新单挑记录</view>
+        <button type="primary" bindtap="updateScore" >对于分数自增10分</button>
+    </view>
+    <view class="page-section">
+        <view class="page-section-title">云端函数更新</view>
+        <button type="primary" bindtap="updatePartyMember" >跟新党员信息</button>
+    </view>
+     <view class="page-section">
+        <view class="page-section-title">删除单条数据</view>
+        <button type="primary" bindtap="delSingleData" >删除单条数据</button>
+    </view>
+    <view class="page-section">
+        <view class="page-section-title">删除多条数据</view>
+        <button type="primary" bindtap="delMoreData" >删除多条数据</button>
+    </view>
+     <view class="page-section">
+        <view class="page-section-title">修改单条数组记录</view>
+        <button type="primary" bindtap="updateArraySingle" >更新数组记录</button>
+    </view>
+</view>
