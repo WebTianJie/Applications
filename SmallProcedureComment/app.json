@@ -1,12 +1,10 @@
 {
   "pages": [
-    "pages/personnal/personal",
     "pages/index/index",
+    "pages/personnal/personal",
     "pages/articlelist/articlelist",
     "pages/commentslist/commentslist",
-    "pages/guest/guest",
-    "pages/logs/logs",
-    "pages/commentdetail/commentdetail"
+    "pages/guest/guest"
   ],
   "window": {
     "backgroundTextStyle": "light",

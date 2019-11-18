@@ -1,6 +1,13 @@
 //app.js
 App({
-  onLaunch: function (e) {
+  onLaunch: function () {
+    if(!wx.cloud){
+      console.log('微信版本过低');
+    }else{
+      wx.cloud.init({
+        traceUser:true
+      })
+    }
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -29,18 +36,11 @@ App({
               }
             }
           })
-          
         }
       }
     })
-  
-  },
-  userInfoReadyCallback(res){
-    this.globalData.userInfo = res.userInfo
   },
   globalData: {
-    userInfo: null,
-    serverPath:'http://192.168.6.182:12306/',
-    title:'文章标题'
+    userInfo: null
   }
 })

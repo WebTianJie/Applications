@@ -1,0 +1,18 @@
+<view class="container">
+    <view class="page-section">
+      <button type="primary" bindtap="uploadImage">上传图片到云存储</button>
+    </view>
+     <view class="page-section">
+    <form bindsubmit="downLoadImage">
+      <input placeholder="云存储Id" name="imgPath"></input>
+      <button type="primary" form-type="submit">下载云图片</button>
+      <image src="{{imgPath}}"></image>
+    </form>
+    </view>
+     <view class="page-section">
+      <button type="primary" bindtap="deleteImage">删除云存储图片</button>
+    </view>
+     <view class="page-section">
+      <button type="primary" bindtap="getTempFilePath">转换临时文件路径</button>
+    </view>
+</view>

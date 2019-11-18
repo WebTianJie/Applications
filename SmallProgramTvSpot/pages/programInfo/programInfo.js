@@ -1,18 +1,36 @@
-// pages/commentdetail/commentdetail.js
+// pages/programInfo/programInfo.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    programData:[]
+  },
 
+  /**
+   * 返回电视列表
+   */
+  returnTVlist(){
+    wx.switchTab({
+      url: '/pages/index/index',
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let that = this
+    //接受缓存数据
+    wx.getStorage({
+      key: 'programDescription',
+      success(res) {
+        that.setData({
+          programData: res.data
+        })
+      },
+    })
   },
 
   /**

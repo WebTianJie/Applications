@@ -89,6 +89,12 @@
   transform: translateX(-50%) translateY(-50%);
   word-break: break-all;
 }
+.comment-content button{
+  width: 210rpx;
+  height: 80rpx;
+  background: #000000;
+  line-height: 80rpx;
+}
 
 .con-title {
   text-align: center;

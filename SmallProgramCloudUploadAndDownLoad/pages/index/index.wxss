@@ -1,0 +1,18 @@
+.contianer{
+  width:100%;
+  height:100%;
+}
+page{
+  width:100%;
+  height:100%;
+}
+.page-section{
+  margin:10rpx auto;
+}
+input{
+  border:2px solid grey;
+  width:100%;
+  height:60rpx;
+  margin:5px auto;
+}
+image{width:100%;height:100%;}
