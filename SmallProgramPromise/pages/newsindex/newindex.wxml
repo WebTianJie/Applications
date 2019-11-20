@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="page-section">
+    <view class="title">新闻数据录入</view>
+    <form bindsubmit="fromSubmit" bindreset="fromReset">
+    <view class="page-row">
+      <text>标题:</text><input name="title" placeholder="请输入"></input>
+    </view>
+    <view class="page-row">
+      <text>描述:</text><input name="des" placeholder="请输入"></input>
+    </view>
+    <view class="page-row">
+      <text>作者:</text><input name="author" placeholder="请输入"></input>
+    </view>
+    <view class="page-row">
+      <text>来源:</text><input name="source" placeholder="请输入"></input>
+    </view>
+    <view class="content">
+      <text>内容:</text><textarea name="content"></textarea>
+    </view>
+    <button form-type="submit">提交</button>
+    <button form-type="reset">重置</button>
+    </form>
+  </view>
+</view>

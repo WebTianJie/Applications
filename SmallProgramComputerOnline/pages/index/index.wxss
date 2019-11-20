@@ -1,0 +1,14 @@
+.page-section{
+  width:90%;
+  background: white;
+  border-radius: 10rpx;
+}
+form{width:100%;}
+ input{width: 90%;border: 1px #ccc solid;border-radius: 5rpx;margin:10rpx auto;}
+ .page-section button{
+   border-bottom: 1px solid #ccc;
+   width: 90%;
+   padding: 0;
+   line-height: 80rpx;
+   font-size:40rpx;
+ }

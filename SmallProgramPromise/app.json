@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/newsindex/newindex",
+    "pages/index/index",
+    "pages/list/list"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "云函数的异步返回",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/newsindex/newindex",
+      "text": "记录"
+    },
+    {
+      "pagePath": "pages/list/list",
+      "text": "列表"
+    }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

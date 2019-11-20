@@ -1,0 +1,13 @@
+<view class="container">
+<form bindsubmit="cal">
+  <view class="page-section">
+    <input name="num1" placeholder="数字1"></input>
+    <input name="num2" placeholder="数字2"></input>
+    <view><button data-opt="+" form-type="submit" type="primary">+</button></view>
+    <view><button data-opt="-" form-type="submit" type="primary">-</button></view>
+    <view><button data-opt="*" form-type="submit" type="primary">*</button></view>
+    <view><button data-opt="/" form-type="submit" type="primary">/</button></view>
+    <input value="{{result}}"></input>
+  </view>
+  </form>
+</view>

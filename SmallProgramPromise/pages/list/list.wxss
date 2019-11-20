@@ -1,0 +1,51 @@
+.page-section{
+  width:95%;
+  border-radius: 10rpx;
+  padding:10rpx;
+  margin:10rpx 0;
+}
+
+.page-row{
+  background: white;
+  margin:20rpx 0;
+  border-radius: 10rpx;
+}
+.stitle{
+    background: white;
+    text-align: center;
+    font-size: 5vw;
+    border-radius: 10rpx;
+}
+form{
+  width:100%;
+}
+text{
+  font-size:5vw;
+  padding:0 10rpx;
+}
+.title{
+  font-size:6vw;
+  font-weight: bold;
+  margin:0 10rpx;
+}
+.author{
+  font-size: 4vw;
+  color:grey;
+  margin: 0 30rpx;
+}
+.intro{
+  width:90%;
+  line-height: 60rpx;
+  margin: 0 atuo;
+}
+.content{
+  font-size: 4vw;
+  padding:0 10rpx;
+}
+textarea{
+  background: rgb(243, 238, 238);
+  margin: 20rpx auto;
+  width:100%;
+}
+.intro{padding-left:20rpx;}
+.page-section button{width:100%;border-bottom: 1px solid #ccc;}

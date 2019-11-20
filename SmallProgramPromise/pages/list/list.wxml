@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="page-section">
+    <view class="stitle"></view>
+    <block wx:for="{{newsList}}">
+      <view class="page-row">
+      <text class="title">{{item.title}}</text>
+      <text class="author">{{item.author}}</text>
+       <view class="intro">{{item.des}}</view>
+       <button data-id="{{item._id}}" bindtap="delete">删除</button>
+    </view>
+    </block>
+  </view>
+</view>
