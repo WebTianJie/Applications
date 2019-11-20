@@ -1,0 +1,4 @@
+
+<view class="button-list">
+  <button bindtap="getAvg" type="primary">求每个类型的平均值</button>
+</view>
