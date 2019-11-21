@@ -1,0 +1,10 @@
+<view>
+  <view class="nav">
+      <view>首页</view>
+      <view>>></view>
+      <slot name="nav"></slot>
+  </view>
+  <view class="page">
+      <slot name="des"></slot>
+  </view>
+</view>

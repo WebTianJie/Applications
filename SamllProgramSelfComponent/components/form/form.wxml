@@ -1,0 +1,4 @@
+<form>
+  <input placeholder="请输入用户名"></input>
+  <input placeholder="请输入密码"></input>
+</form>

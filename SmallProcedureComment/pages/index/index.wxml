@@ -9,7 +9,7 @@
       </view>
     </view>
     <view class="comment-content">
-      <view class="row" wx:for="{{comments_list}}" wx:key="{{index}}">
+      <view class="row" wx:for="{{comments_list}}" wx:key="index">
         <view class="avatar">
           <image src="{{item.avatarUrl}}"></image>
         </view>

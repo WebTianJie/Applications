@@ -1,0 +1,10 @@
+<!--pages/index/index.wxml-->
+<view>
+  <myWelcome>
+    <view slot="nav">购物</view>
+  </myWelcome>
+    <myWelcome>
+    <view slot="des">狂欢购物的天堂</view>
+  </myWelcome>
+</view>
+
