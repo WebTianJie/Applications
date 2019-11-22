@@ -1,6 +1,7 @@
 //app.js
 App({
   onLaunch: function (e) {
+    let  that=this;
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -9,17 +10,8 @@ App({
     // 登录
     wx.login({
       success: res => {
-        console.log(res);
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        wx.request({
-          url: 'https://api.weixin.qq.com/sns/jscode2session?appid=wx51441ba03f4b09f2&secret=9ce97a970effcf6754082ac9f43c0f9f&js_code='+res.code+'&grant_type=authorization_code',
-          success: function (response) {
-            console.log(response);
-            var openid = response.data.openid;
-            console.log('请求获取openid:' + openid);
-            //可以把openid存到本地，方便以后调用
-          }
-        })
+        that.getOpenId(res.code);
       }
     })
     // 获取用户信息
@@ -29,7 +21,6 @@ App({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
-              console.log(res);
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
 
@@ -45,6 +36,39 @@ App({
       }
     })
   
+  },
+  /***
+   * 根据code获取openid
+   */
+   getOpenId(code){
+     let that=this;
+    wx.request({
+      url: that.globalData.serverPath + 'getOpenId?code=' + code,
+      success: function (res) {
+        var openid = JSON.parse(res.data.data).openid;
+        that.getUserByOpenId(openid);
+      },
+      fail(err) {
+        console.log(err);
+      }
+    })
+  },
+  /**
+   * 根据openid获取用户消息
+   */
+  getUserByOpenId(_id){
+    console.log(_id);
+    let that=this;
+    wx.request({
+      url: that.globalData.serverPath + 'getUserByOpenId?_id=' + _id,
+      success: function (res) {
+         console.log(res);
+        //可以把openid存到本地，方便以后调用
+      },
+      fail(err) {
+        console.log(err);
+      }
+    })
   },
   userInfoReadyCallback(res){
     this.globalData.userInfo = res.userInfo

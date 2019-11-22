@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tagName":"/components/tag-name/tag-name",
+    "formField": "/components/form/form-field"
+  }
+}

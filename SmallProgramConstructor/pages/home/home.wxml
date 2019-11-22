@@ -1,0 +1,10 @@
+<dialog id="dialog" 
+  title='警告' 
+  content="确定全部删除数据" 
+  cancelText="取消"
+  confirmText="下一步"
+  bind:cancelEvent="_cancelEvent"
+   bind:confirmEvent="_confirmEvent"
+></dialog>
+
+<button type="primary" bindtap="show">显示弹框</button>

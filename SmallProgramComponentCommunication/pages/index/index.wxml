@@ -1,0 +1,3 @@
+<!--pages/index/index.wxml-->
+<!-- 如果传递属性使用了短横线命名,组件内部接收的时候,要使用驼峰命名属性接收 -->
+<tag title="{{title}}" ></tag>

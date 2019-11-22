@@ -1,0 +1,6 @@
+<!--components/user/user.wxml-->
+<view>dom:{{con}}</view>
+<view>property:{{name}}</view>
+<view>age:{{age}}</view>
+<button bindtap="myButton">事件</button>
+<button bindtap="_privateMethod">私有事件</button>
