@@ -1,8 +1,7 @@
 {
   "pages": [
-     "pages/watch/watch",
-    "pages/home/home",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/about/aubout"
   ],
   "window": {
     "backgroundTextStyle": "light",

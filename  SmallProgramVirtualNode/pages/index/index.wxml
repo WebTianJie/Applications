@@ -1,0 +1,4 @@
+<view>单选</view>
+<group generic:selectable="radiokbox"></group>
+<view>复选</view>
+<group generic:selectable="checkbox"></group>

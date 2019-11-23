@@ -1,7 +1,6 @@
 {
   "pages": [
-     "pages/watch/watch",
-    "pages/home/home",
+    "pages/form/from",
     "pages/index/index"
   ],
   "window": {

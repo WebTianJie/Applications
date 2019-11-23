@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "li-com":"/components/li-com/li-com",
+    "ul-com":"/components/ul-com/ul-com"
+  }
+}

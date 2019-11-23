@@ -1,0 +1,6 @@
+<!--components/watch/watch.wxml-->
+ <view>num1:{{num1}}</view>
+<view>num2:{{num2}}</view>
+<view>sum:{{sum}}</view>
+<view>name:{{student.name}}</view>
+<view>newname:{{student.name}}</view>

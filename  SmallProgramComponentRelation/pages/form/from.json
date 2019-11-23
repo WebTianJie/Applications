@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "form-com": "/components/form-com/form-com",
+    "submit-com": "/components/form-com/submit",
+    "input-com": "/components/form-com/input"
+  }
+}

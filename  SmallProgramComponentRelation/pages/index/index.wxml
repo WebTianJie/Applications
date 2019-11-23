@@ -1,0 +1,6 @@
+<view>
+  <ul-com>
+    <li-com livalue="li 的 value01"></li-com>
+    <li-com livalue="li 的 value02"></li-com>
+  </ul-com>
+</view>

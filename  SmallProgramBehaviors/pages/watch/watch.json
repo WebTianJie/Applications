@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+      "watch":"/components/watch/watch"
+  }
+}

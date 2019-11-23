@@ -1,0 +1,2 @@
+<!--components/com/com.wxml-->
+<text>{{form}}</text>

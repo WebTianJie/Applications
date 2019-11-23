@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "group":"/components/group/group",
+    "checkbox": "/components/checkbox/checkbox",
+    "radiokbox": "/components/radiobox/radiobox"
+  }
+}

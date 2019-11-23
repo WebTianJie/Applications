@@ -1,0 +1,5 @@
+
+<form-com>
+ <view> <input-com></input-com></view>
+  <submit-com></submit-com>
+</form-com>

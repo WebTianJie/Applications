@@ -1,7 +1,5 @@
 {
   "pages": [
-     "pages/watch/watch",
-    "pages/home/home",
     "pages/index/index"
   ],
   "window": {
