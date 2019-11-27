@@ -53,7 +53,15 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/commentslist/commentslist",
+					"pathName": "pages/commentslist/commentslist",
+					"query": "",
+					"scene": null
+				}
+			]
 		}
 	}
 }

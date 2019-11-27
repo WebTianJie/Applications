@@ -82,20 +82,20 @@
   position: absolute;
   background: #fff;
   border-radius: 30rpx;
-  height: 75%;
   width: 80%;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
   word-break: break-all;
 }
-.comment-content button{
-  width: 210rpx;
-  height: 80rpx;
-  background: #000000;
-  line-height: 80rpx;
+.comment-content .btns{
+  /* position: absolute; */
+  bottom: 15rpx;
+  display: flex;
+  width:100%;
+  justify-content: space-around;
 }
-
+.btns button{background: #000;font-size: 30rpx;height: 80rpx;}
 .con-title {
   text-align: center;
 }

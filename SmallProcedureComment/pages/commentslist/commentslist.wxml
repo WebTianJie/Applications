@@ -21,6 +21,9 @@
     <view class="con-con">
       {{commetCon}}
     </view>
-    <button type="primary" catchtap="approval" data-id="{{conid}}">通过</button>
+   <view class="btns">
+     <button type="primary" catchtap="approval" data-id="{{conid}}">通过</button>
+     <button type="primary" catchtap="approval" data-id="{{conid}}">回复</button>
+   </view>
   </view>
 </view>

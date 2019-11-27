@@ -57,12 +57,15 @@ App({
    * 根据openid获取用户消息
    */
   getUserByOpenId(_id){
-    console.log(_id);
     let that=this;
     wx.request({
       url: that.globalData.serverPath + 'getUserByOpenId?_id=' + _id,
       success: function (res) {
-         console.log(res);
+         if(res.data.data.length>0){
+            wx.navigateTo({
+              url: '/pages/personal/personal'
+            })
+         }
         //可以把openid存到本地，方便以后调用
       },
       fail(err) {
