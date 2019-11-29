@@ -1,6 +1,7 @@
 import  Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home'
+import Loge from '../views/Loge'
 Vue.use(Router);
 export default  new Router({
   mode:'history',
@@ -11,9 +12,24 @@ export default  new Router({
       redirect:'/home'
     },
     {
+      path:'/loge',
+      name:'loge',
+      component:Loge,
+    },
+    {
       path:'/home',
       name:'home',
-      component:Home
+      component:Home,
+      beforeEnter(to,from,next){
+        next();
+        // let  flag=window.confirm('确定加载当前网站吗;')
+        //  if(flag){
+        //    next();
+        //  }else{
+        //
+        // }
+        }
+
     },{
       path:'/learn',
       name:'learn',
@@ -21,6 +37,9 @@ export default  new Router({
     },{
       path:'/student',
       name:'student',
+      meta:{
+        login:true
+      },
       component: ()=>import('../views/Student')
     }, {
       path: '/about',
@@ -41,12 +60,25 @@ export default  new Router({
           return'/NotFound'
         }
       }
+    },
+    {
+      path:'/question/:id',
+      name:'question',
+      component:()=>import('../components/comu/Question')
+    },
+    {
+      path:'/login',
+      name:'login',
+      component:()=>import('../components/comu/Login')
     }
     ,{
       path:'/comu',
       name:'comu',
       component: ()=>import('../views/Comu'),
       redirect:'/academic',
+      meta:{
+        login:true
+      },
       children:[
         {
           path: '/academic',

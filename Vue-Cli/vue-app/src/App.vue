@@ -3,6 +3,7 @@
     <div class="header">
       <div class="logo" @click="toHome">渡一教育</div>
        <ul class="nav">
+           <router-link tag="li" to="/loge">loge</router-link> |
            <router-link tag="li" to="/home">Home</router-link> |
            <router-link tag="li"  to="/learn">Learn</router-link> |
            <router-link tag="li"  to="/student">Student</router-link> | |
