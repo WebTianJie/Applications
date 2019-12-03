@@ -1,1 +1,16 @@
-/* pages/addadmin/addadmin.wxss */
+.page-body{
+  width:90%;
+  margin:30rpx auto;
+}
+.btn{background: #000;text-align: center;color:#fff;}
+.row{display: flex;line-height: 70rpx;padding-top:20rpx;justify-content: space-between;padding-right: 100rpx;padding-left: 80rpx;}
+.row input{
+    border:#ccc solid 1px;
+    border-radius: 6rpx;
+    font-size: 28rpx;
+    padding:15rpx;
+    box-sizing: border-box;
+    height: 70rpx;
+    margin-left: 20rpx;
+}
+.btn{width:240rpx; margin-top: 30rpx;}

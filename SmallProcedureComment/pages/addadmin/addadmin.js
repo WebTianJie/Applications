@@ -1,13 +1,31 @@
 // pages/addadmin/addadmin.js
+const app=getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+   
   },
-
+  formSubmit(e){
+    wx.request({
+      url: app.globalData.serverPath + 'addUser?openId=' + e.detail.value.openId + '&vitatrUrl=' + e.detail.value.vitatrUrl + '&name='+e.detail.value.name,
+      success(res){
+        console.log(res);
+        if (res.data.status=='success'){
+          wx.showToast({
+            title: '添加成功',
+            success(){
+              wx.redirectTo({
+                url: '/pages/personal/personal'
+              })
+            }
+          })
+        }
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

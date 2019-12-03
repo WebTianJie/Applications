@@ -1,2 +1,8 @@
-<!--pages/addadmin/addadmin.wxml-->
-<text>pages/addadmin/addadmin.wxml</text>
+<view class="page-body">
+<form bindsubmit="formSubmit">
+<view class="row"><text>微信昵称:</text> <input name='name' placeholder="这里需要填写微信昵称"></input></view>
+  <view class="row"><text>OpenId:</text> <input name='openId' placeholder="这里需要填写openID"></input></view>
+  <view class="row"><text>头像地址:</text> <input name='vitatrUrl' placeholder="这里是头像地址"></input></view>
+  <button class="btn" form-type="submit" size="m" >添加</button>
+</form>
+</view>

@@ -1,24 +1,22 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-<!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-<!--    <todolist></todolist>-->
-    <Father></Father>
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Async></Async>
+    <Count></Count>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-// import todolist from './components/todolist.vue'
-
-import Father from "./components/Father";
-
+import HelloWorld from './components/HelloWorld.vue'
+import Async from "./components/Async";
+import Count from "./components/count";
 export default {
   name: 'app',
   components: {
-    // HelloWorld,
-    // todolist,
-    Father
+    Count,
+    HelloWorld,
+    Async
   }
 }
 </script>
