@@ -1,0 +1,27 @@
+.row{display: flex;padding-bottom: 40rpx;}
+.right{width: 100%;padding-left: 20rpx;}
+.wguest{color:#3c6289;font-weight: 500;}
+.contents{color:#222;padding-top: 6rpx;padding-right:15rpx;word-break:break-all;}
+.avatar{display: flex;justify-content: space-between;}
+.avatar test{
+  margin-top: 6rpx;
+  width:60rpx;
+  height:60rpx;
+}
+.user{
+  padding-top:4rpx;
+}
+.author{position: relative;left: 7rpx;}
+.author::before{
+  position: absolute;
+  content:'';
+  display:inline-block;
+  width:6rpx;
+  height: 35rpx;
+  background: rgb(41, 156, 41);
+  line-height: 40rpx;
+  left: -12rpx;
+  top: 8rpx;
+}
+.contents-title {display: flex;justify-content: space-between;}
+.contents-title .fabulous{color:#3c6289;font-size: 28rpx;}

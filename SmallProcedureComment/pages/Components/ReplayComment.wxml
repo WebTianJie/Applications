@@ -1,0 +1,18 @@
+<view wx:for="{{replyList}}" wx:key="id">
+  <view class="row">
+    <view class="avatar">
+      <text class="author">作者{{commit_id}}</text>
+    </view>
+    <view class="right">
+      <view class="user-list">
+        <view class="user">
+          <view class="contents-title">
+            <text class="nickname">{{item.guestName}}</text>
+            <view class="fabulous" data-isclicked="{{item.isfabulous}}" data-fabulous="{{item.fabulous}}" data-id="{{item.id}}" bindtap="addFabulous">赞 {{item.fabulous}}</view>
+          </view>
+          <view class="contents">{{item.guestContent}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
