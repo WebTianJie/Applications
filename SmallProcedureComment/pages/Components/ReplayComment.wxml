@@ -7,6 +7,7 @@
     <view class="right">
       <view class="contents">{{item.guestContent}}
       </view>
+      <view wx:if="{{adminName=='true'}}" data-id="{{item.id}}" class="delete" bindtap="deleteReply">[删除]</view>
     </view>
   </view>
 </view>

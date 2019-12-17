@@ -20,3 +20,4 @@
 }
 .contents-title {text-align: right;}
 .fabulous{color:#3c6289;font-size: 28rpx;}
+.delete{margin-left:60rpx;color:#3c6289;font-size: 28rpx;}
