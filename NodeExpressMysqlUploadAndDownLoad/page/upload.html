@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片上传</title>
+</head>
+<body>
+<input type="text" name="name" id="name" placeholder="姓名">
+<input type="file" id="file">
+<button onclick="upload()">上传</button>
+<img src="#" alt="" id="img">
+<a href="#" download="down.jpg" id="down">下载</a>
+</body>
+<script>
+    function upload(){
+        var name=document.getElementById('name').value
+        var file=document.getElementById('file').files[0];
+        var img=document.getElementById('img');
+        var down=document.getElementById('down');
+        var formData=new  FormData();
+        formData.append('name',name);
+        formData.append('files',file);
+        var xhr=new XMLHttpRequest();
+        xhr.open('POST','/upload',true);
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState==4 && xhr.status==200){
+                var  res=xhr.responseText;
+                if(res){
+                    img.src='/getPic?path='+res;
+                    down.href='/getPic?path='+res;
+                    alert('上传成功');
+                }
+            }
+        }
+        xhr.send(formData);
+
+    }
+</script>
+</html>

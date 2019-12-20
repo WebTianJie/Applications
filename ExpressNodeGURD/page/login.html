@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+学号: <input type="text" id="stuNum" placeholder="请输入学号">
+密码: <input type="text" id="pwd" placeholder="请输入密码">
+<button onclick="submit()">提交</button>
+</body>
+<script>
+   function submit(){
+       var stuNum=document.getElementById('stuNum').value;
+       var pwd=document.getElementById('pwd').value;
+       console.log(stuNum,pwd);
+       var  xhr=new XMLHttpRequest();
+       xhr.open('get','/queryStudentByStunum?stu_num='+stuNum+'&pwd='+pwd,true);
+       xhr.onreadystatechange=function (res) {
+           if(xhr.readyState==4&&xhr.status==200){
+               if(res){
+                   console.log('登录成功');
+               }
+           }
+       }
+       xhr.send();
+   }
+</script>
+</html>

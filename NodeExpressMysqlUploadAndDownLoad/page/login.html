@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+</head>
+<body>
+<h1>登录页面</h1>
+<input type="text" placeholder="学号" id="stum">
+<input type="text" placeholder="密码" id="pwd">
+<button onclick="login()">登录</button>
+</body>
+<script>
+    function login(){
+        var stum=document.getElementById('stum').value;
+        var pwd=document.getElementById('pwd').value;
+        var  xhr=new  XMLHttpRequest();
+        xhr.open('get','/login?stum='+stum+'&pwd='+pwd,true);
+        xhr.onreadystatechange=function (){
+            if(xhr.readyState==4 && xhr.status==200){
+                var  res=JSON.parse(xhr.responseText)
+                if(res[0].id){
+                    alert('登录成功');
+                }
+            }
+        }
+        xhr.send();
+    }
+
+</script>
+</html>

@@ -19,20 +19,24 @@ module.exports={
   // 首页>根据id删除评论
   delCommitById:baseServeUrl+'delCommitById',
 
-  // 留言页面 增加留言
+  // 留言页面>增加留言
   insertComment:baseServeUrl+'insertComment',
 
-  //待审核评论列表 审核
+  //待审核评论列表>审核
   updateApprovalCommentsById:baseServeUrl+'updateApprovalCommentsById',
-  //待审核评论列表  获取所有的待审核评论的列表
+  //待审核评论列表>获取所有的待审核评论的列表
   getAllApprovalCommentsByTitle:baseServeUrl+'getAllApprovalCommentsByTitle',
 
-  //文章列表 根据title,获取所有文章列表
+  //文章列表>根据title,获取所有文章列表
   queryComment:baseServeUrl+'queryComment',
-  //文章列表 根据title,删除文章下面所有的评论
+  //文章列表>根据title,删除文章下面所有的评论
   delCommentByTitle:baseServeUrl+'delCommentByTitle',
 
-  //管理员页面,添加管理员
-  addUser:baseServeUrl+'addUser'
+  //管理员页面>添加管理员
+  addUser:baseServeUrl+'addUser',
+  //管理员页面>获取所有的管理员
+  getAllAdmin:baseServeUrl+'getAllAdmin',
+  //管理员页面>根据id删除管理员
+  deleteAdmin:baseServeUrl+'deleteAdminById'
 
 }
