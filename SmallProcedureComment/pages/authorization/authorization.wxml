@@ -1,0 +1,2 @@
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo"  hidden="{{show}}" wx:if="{{!canUse}}">授权</button>
+<navigator class="button" open-type="exit" hidden="{{!show}}" target="miniProgram">退出</navigator>

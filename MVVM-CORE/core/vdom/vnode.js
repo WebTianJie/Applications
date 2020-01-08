@@ -1,0 +1,22 @@
+export  default class VNode {
+    constructor(
+        tag,//节点类型.input,div,span
+        elm,//节点对应真是dom
+        children,//当前节点的子节点
+        text,//虚拟节点中的文本
+        data,//节点数据,暂时保留
+        parent,//父节点
+        nodeType,//节点类型
+    ){
+     this.tag=tag;
+     this.elm=elm;
+     this.children=children;
+     this.data=data;
+     this.text=text;
+     this.parent=parent;
+     this.nodeType=nodeType;
+     this.env={};
+     this.instructions=null;//差值表达式
+     this.template=[];//模板
+    }
+}

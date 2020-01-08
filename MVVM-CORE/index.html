@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red{color:red}
+        .green{color:green}
+    </style>
+</head>
+<body>
+ <div id="test">
+     <img v-bind:src="imgSrc" alt="" @:mouseenter="enter" @:mouseleave="leave">
+     <h1>你好{{content}},{{des}}</h1>
+     <p> {{des}}</p>
+     <span>{{obj.x}}</span>
+     <input type="text" v-model="model.name">{{model.name}}
+     <ul>
+         <li v-for="(key,index) in list">
+             姓名:{{key.name}}
+             年靓:{{key.age}}
+         </li>
+     </ul>
+     <span v-bind:class="red">我是简单的绑定样式</span>
+     <span v-bind:class="{red:obj.x > 1,green:obj.x < 1}">我是复杂的绑定样式</span>
+ </div>
+</body>
+<script type="module">
+    import Due from './core/index.js'
+    window.test=new Due({
+        el:'test',
+        data:{
+            content:'这里是内容',
+            des:'这里是描述',
+            obj:{
+                x:2,
+                y:2
+            },
+            red:'red',
+            model:{
+                name:'北冥'
+            },
+            imgSrc:'./core/img/1.jpg',
+            list:[
+                {name:'beiming',age:18},
+                {name:'tianjie',age:16},
+                {name:'一笑',age:15},
+                {name:'奈何',age:14}
+            ]
+        },
+        methods:{
+            enter(){
+                console.log('这是陈慧琳吗?');
+            },
+            leave(){
+                console.log('这不是');
+            }
+        },
+        created(){
+            console.log('created 完成了');
+        },
+        mounted(){
+            console.log('mounted 挂载完成了');
+        }
+    })
+</script>
+</html>

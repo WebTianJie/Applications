@@ -38,5 +38,7 @@ module.exports={
   getAllAdmin:baseServeUrl+'getAllAdmin',
   //管理员页面>根据id删除管理员
   deleteAdmin:baseServeUrl+'deleteAdminById'
-
 }
+
+
+
