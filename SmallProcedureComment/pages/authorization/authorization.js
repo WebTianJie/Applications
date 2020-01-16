@@ -14,25 +14,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    app.globalData.title=options.title;
     var that=this;
     // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (!res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.showModal({
-            title:'留言需要授权',
-            success(res){
-              if(res.cancel){
-                that.setData({
-                  show:true
-                })
-              }
-            }
-         })
+   let userInfo=wx.getStorageSync('userInfo');
+   if(!userInfo){
+      wx.showModal({
+        title:'留言需要授权',
+        success(res){
+          if(res.cancel){
+            that.setData({
+              show:true
+            })
+          }
         }
-      }
     })
+   }
   
   },
   getUserInfo: function(e) {
@@ -44,6 +41,7 @@ Page({
     app.getCode().then(function(res){
         return  until.getOpenId(res.code);
     }).then(function(res){
+      console.log(res);
         return until.getUserByOpenId(JSON.parse(res.data.data).openid);
     }).then(function(res){
         if(res.data.data.length > 0){
@@ -53,7 +51,7 @@ Page({
           })
         }else{
           wx.reLaunch({
-            url: '/pages/index/index'
+            url: '/pages/index/index?title'+app.globalData.title
           })
         }
     })
@@ -69,7 +67,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let userInfo=wx.getStorageSync('userInfo');
+    if(userInfo){
+      wx.redirectTo({
+        url: '/pages/index/index?title='+app.globalData.title,
+      })
+    }
   },
 
   /**

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="root">
+
+</div>
+</body>
+<!--React的核心库,与宿主环境无关-->
+<script crossorigin src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+<!--依赖核心库,将核心功能与页面功能结合-->
+<script crossorigin src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"> </script>
+<!--编译JSX-->
+<script src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+<script type="text/babel">
+    //创建h1元素
+    //第一个参数:元素类型,如果字符串,一个普通的html
+    //第二个参数,元素的属性,一个对象
+    //后续参数 ,元素节点
+    // var span=React.createElement('span',{
+    //     class:'header'
+    // },'我是span元素')
+    // var h1=React.createElement('h1',{
+    //     title:'第一个React元素'
+    // },'Hello Word',span);
+    // //## JSX
+    var  h1=<h1>第一个React元素 <span>我是一个span元素</span></h1>
+    ReactDOM.render(h1,document.getElementById('root'))
+</script>
+</html>

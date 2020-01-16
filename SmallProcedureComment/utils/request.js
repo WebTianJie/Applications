@@ -1,4 +1,4 @@
-const baseServeUrl='http://192.168.6.254:12306/';
+const baseServeUrl='http://cmt.uguoba.com/';
 module.exports={
   // 首页>根据登录的res_code获取openid
   getOpenId:baseServeUrl+'getOpenId',
